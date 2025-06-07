@@ -121,6 +121,12 @@
 <body>
     <h1>I Prototyped an IDE for How We Actually Code Now</h1>
     <p>by <a href="https://x.com/jordanful">Jordan Fulghum</a>, June 2025</p>
+       <div class="img-container-full">
+        <a href="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
+            <img src="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ" alt=""/>
+        </a>
+        <div class="img-caption">The core IDE, showing a demo SaaS app ("PropertySync") in the preview pane</div>
+    </div>
     <p>Like most devs, I've spent the last six months getting used to this new AI-assisted coding world. While vibecoding is not only exciting but now my <em>default</em> way of working, I have found that the tools that have embraced it fall short in various ways.</p>
     
     <p>The problem with current tools is they're all compromised. Cursor bolts AI onto VS Code's legacy architecture. You can feel the weight of decades of assumptions about how editors should work and it feels like the core loop is crammed into a third of the window. Claude Code gets closer to the conversational model but strips away too much context so it feels like coding through a keyhole. The newer tools like Codex optimize for the wrong cycle time, focusing on pull requests when most of my iterations are immediate and focused. Replit gets a lot of things right, simplifying or abstracting critical technical pieces of the application like a database, but the LLM layer feels isolated away as another abstraction as opposed to the thing. The engine itself.</p>
@@ -129,12 +135,7 @@
     
     <p>So I prototyped something different. A native Mac IDE designed around the reality that most application development today happens in conversation with an LLM. Not as an afterthought or a plugin, but as the primary interface. The core insight is that modern programming isn't really about managing files and directories but rather managing context, intent, and tasks. You're constantly shuttling between "show me this," "change that," "what happens if," and "make it work."</p>
     
-    <div class="img-container-full">
-        <a href="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
-            <img src="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ" alt=""/>
-        </a>
-        <div class="img-caption">The core IDE, showing a demo SaaS app ("PropertySync") in the preview pane</div>
-    </div>
+ 
     
     <p>The atomic unit isn't a file or a project—it's a task. Think of it like a feature branch, but richer. You describe what you want to build next, and the IDE creates a living implementation plan in markdown that updates as you work. It writes and maintains tests automatically. Multiple tasks can run in parallel, each with their own context and state. Deployments to production environments are tied 1:1 with these AI-led tasks, so reverting or undoing is 1-click simple.</p>
 
