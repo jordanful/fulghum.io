@@ -4,6 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Prototyped an IDE for How We Actually Code Now</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="I Prototyped an IDE for How We Actually Code Now">
+    <meta name="description" content="A native Mac IDE built around conversations with LLMs as the primary interface. Task-centric development with AI-driven planning, automated testing, and seamless production deployment.">
+    <meta name="author" content="Jordan Fulghum">
+    <meta name="keywords" content="IDE, AI coding, vibecoding, LLM, conversational programming, software development, prototype, task-centric development">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fulghum.io/ide">
+    <meta property="og:title" content="I Prototyped an IDE for How We Actually Code Now">
+    <meta property="og:description" content="Moving beyond the 'horseless carriage' phase of AI-assisted development. A conversational IDE prototype that makes LLMs the primary interface, not an afterthought.">
+    <meta property="og:image" content="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Screenshot of a conversational IDE showing a SaaS app in development">
+    <meta property="og:site_name" content="Jordan Fulghum">
+    <meta property="article:author" content="Jordan Fulghum">
+    <meta property="article:published_time" content="2025-06-08T00:00:00Z">
+    <meta property="article:section" content="Software Development">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="IDE">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="LLM">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fulghum.io/ide">
+    <meta property="twitter:title" content="I Prototyped an IDE for How We Actually Code Now">
+    <meta property="twitter:description" content="Moving beyond the 'horseless carriage' phase of AI-assisted development. A conversational IDE prototype that makes LLMs the primary interface, not an afterthought.">
+    <meta property="twitter:image" content="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ">
+    <meta property="twitter:image:alt" content="Screenshot of a conversational IDE showing a SaaS app in development">
+    <meta property="twitter:creator" content="@jordanful">
+    <meta property="twitter:site" content="@jordanful">
+    
+    <!-- Additional Meta Tags for Rich Snippets -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://fulghum.io/ide">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "I Prototyped an IDE for How We Actually Code Now",
+      "description": "A native Mac IDE built around conversations with LLMs as the primary interface. Task-centric development with AI-driven planning, automated testing, and seamless production deployment.",
+      "image": "https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ",
+      "author": {
+        "@type": "Person",
+        "name": "Jordan Fulghum",
+        "url": "https://x.com/jordanful"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jordan Fulghum"
+      },
+      "datePublished": "2025-06-08",
+      "dateModified": "2025-06-08",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fulghum.io/ide"
+      },
+      "keywords": ["IDE", "AI coding", "vibecoding", "LLM", "conversational programming", "software development"],
+      "articleSection": "Software Development"
+    }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
         
@@ -24,6 +96,13 @@
             line-height: 1.3;
         }
         
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
         p {
             margin-bottom: 1.5rem;
         }
@@ -33,12 +112,16 @@
             font-weight: 500;
         }
         
-        ol {
+        strong {
+            font-weight: 600;
+        }
+        
+        ul, ol {
             margin: 1.5rem 0;
             padding-left: 1.5rem;
         }
         
-        ol li {
+        ul li, ol li {
             margin-bottom: 0.5rem;
         }
         
@@ -49,6 +132,12 @@
         
         a:hover {
             text-decoration: underline;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
         }
         
         /* Image styling */
@@ -98,6 +187,10 @@
                 font-size: 1.75rem;
             }
             
+            h2 {
+                font-size: 1.35rem;
+            }
+            
             .img-container-inline {
                 float: none;
                 margin: 1rem 0;
@@ -115,37 +208,61 @@
                 font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
+            
+            h2 {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
 <body>
     <h1>I Prototyped an IDE for How We Actually Code Now</h1>
     <p>by <a href="https://x.com/jordanful">Jordan Fulghum</a>, June 2025</p>
-       <div class="img-container-full">
+    
+    <div class="img-container-full">
         <a href="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
             <img src="https://media.cleanshot.cloud/media/98343/95Nf2hsa4aEjXLtlN03hI9bJQEXZR7WyG5UrSx5u.jpeg?Expires=1749324465&Signature=Fv0ua8guKaTbaSO7C50~ofcgFaf4mnjie0HMOVluSSelp3DqQVS9AbU3OuilwlZgFyrgzzBGD43yhOq5Q86NEeX7cWcnEKHHDIpZdeB0Kiysk2fI03RY5XvWciuW1npVp9eEPME5zDJFFZKKmyT6sIffErOnGqQVH56Y8z9djnT0wNqXFm5lz2whSi88D~ZE3G94ylt63F5-MaFrYf20V9EvoUF~av6bmf6NkP2cg3YASUMy56DyA1QGT0fYza3aU9rTgQjt2E5~r08WjTBerCocPH3CvUmwlzwe1qZC2hI7-8iOcysh7GkdAM2flP88ogBXOIXqKN0LOCJjlxJSmQ__&Key-Pair-Id=K269JMAT9ZF4GZ" alt=""/>
         </a>
         <div class="img-caption">The core IDE, showing a demo SaaS app ("PropertySync") in the preview pane</div>
     </div>
-    <p>Like most devs, I've spent the last six months getting used to this new AI-assisted coding world. While vibecoding is not only exciting but now my <em>default</em> way of working, I have found that the tools that have embraced it fall short in various ways.</p>
+
+    <p>Like most devs, I've spent the last six months adjusting to this new AI-assisted coding landscape. While vibecoding has become my <em>default</em> way of working, existing tools consistently fall short.</p>
     
-    <p>The problem with current tools is they're all compromised. Cursor bolts AI onto VS Code's legacy architecture. You can feel the weight of decades of assumptions about how editors should work and it feels like the core loop is crammed into a third of the window. Claude Code gets closer to the conversational model but strips away too much context so it feels like coding through a keyhole. The newer tools like Codex optimize for the wrong cycle time, focusing on pull requests when most of my iterations are immediate and focused. Replit gets a lot of things right, simplifying or abstracting critical technical pieces of the application like a database, but the LLM layer feels isolated away as another abstraction as opposed to the thing. The engine itself.</p>
+    <p>Current IDEs feel compromised:</p>
     
-    <p>What I realize is that we've been thinking about this backwards. Instead of adding AI to traditional IDEs (or a chat interface to a terminal), we need to start with the conversational loop and build around it. We're in the <a href="https://koomen.dev/essays/horseless-carriages/">horseless carriage</a> phase of software development.</p>
+    <ul>
+        <li><strong>Cursor</strong> bolts AI onto VS Code's legacy architecture, cramming its primary interaction into a third of the window.</li>
+        <li><strong>Claude Code</strong> gets closer to the conversational model but strips away too much context so it feels like coding through a keyhole.</li>
+        <li><strong>Codex</strong> optimizes for pull requests, neglecting immediate, iterative cycles.</li>
+        <li><strong>Replit</strong> simplifies technical details but isolates its LLM as a mere add-on rather than integrating it fundamentally into the development process.</li>
+    </ul>
     
-    <p>So I prototyped something different. A native Mac IDE designed around the reality that most application development today happens in conversation with an LLM. Not as an afterthought or a plugin, but as the primary interface. The core insight is that modern programming isn't really about managing files and directories but rather managing context, intent, and tasks. You're constantly shuttling between "show me this," "change that," "what happens if," and "make it work."</p>
+    <p>What struck me is that we've approached this backward. Instead of forcing conversational interactions onto traditional IDE architectures, we need tools built explicitly around conversation. We're currently in the <a href="https://koomen.dev/essays/horseless-carriages/">"horseless carriage"</a> phase of software development.</p>
+
+    <h2>Introducing a Task-Centric, Conversational IDE</h2>
     
- 
+    <p>I prototyped a native Mac IDE from scratch, centered around the reality of modern application development—conversations with an LLM as the primary interface. The core insight is that coding today isn't about managing files and directories but about managing context, intent, and tasks. You're constantly navigating between questions like "show me this," "change that," and "make it work."</p>
     
-    <p>The atomic unit isn't a file or a project—it's a task. Think of it like a feature branch, but richer. You describe what you want to build next, and the IDE creates a living implementation plan in markdown that updates as you work. It writes and maintains tests automatically. Multiple tasks can run in parallel, each with their own context and state. Deployments to production environments are tied 1:1 with these AI-led tasks, so reverting or undoing is 1-click simple.</p>
+    <p>The atomic unit of work isn't a file or a project—it's a task. Think feature branches, but richer:</p>
+    
+    <ol>
+        <li><strong>Describe what you want</strong> in natural language.</li>
+        <li><strong>The agent creates a markdown-based implementation plan</strong>, which evolves dynamically.</li>
+        <li><strong>Automated tests</strong> are created and updated as changes happen.</li>
+        <li><strong>Test suites automatically run</strong> before marking a task as ready.</li>
+        <li><strong>Human review and approval</strong> trigger deployment to production, linking tasks directly to deployed versions.</li>
+    </ol>
+    
+    <p>Multiple tasks run concurrently, each managing their own context and state. Reverting or undoing a deployment is as simple as a single click.</p>
 
     <a href="https://media.cleanshot.cloud/media/98343/jTSXiLPm9gjHuJUt2zPT4VbG8M7c7qUBoFuz3Zzm.jpeg?Expires=1749324238&Signature=lmIEWC7-dNunz3ayc1zNoR0ZdY~ynojUqukirPXw4B6WJgL~bgCMgOURu8iH2AoY05aGofFnee6jHrldmGRY~gMGEZv0kVcPp0vUJWeOdeqgtVFIb~LbNVsDXtbKwrY-acjgrbDnzHVfK-jilshlEtrPzWyv5FiBIiyXL-7fNOTeRVqTi3Dqgp2eIPmMlMW6GhDRDSBA0q~~Q2CynSiaK76MtusLLcOV2BAhrID-isNbIO1ZqLLKICre-9Ts7oMkHTB5v6V2zcjkAvO4GBL79q5~CZKddrkrZmIlUnI2LKN2ehkUeNvNfpjYLnkBnbZOcGPWASy6WxLJ5qKr6h937w__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
         <img src="https://media.cleanshot.cloud/media/98343/jTSXiLPm9gjHuJUt2zPT4VbG8M7c7qUBoFuz3Zzm.jpeg?Expires=1749324238&Signature=lmIEWC7-dNunz3ayc1zNoR0ZdY~ynojUqukirPXw4B6WJgL~bgCMgOURu8iH2AoY05aGofFnee6jHrldmGRY~gMGEZv0kVcPp0vUJWeOdeqgtVFIb~LbNVsDXtbKwrY-acjgrbDnzHVfK-jilshlEtrPzWyv5FiBIiyXL-7fNOTeRVqTi3Dqgp2eIPmMlMW6GhDRDSBA0q~~Q2CynSiaK76MtusLLcOV2BAhrID-isNbIO1ZqLLKICre-9Ts7oMkHTB5v6V2zcjkAvO4GBL79q5~CZKddrkrZmIlUnI2LKN2ehkUeNvNfpjYLnkBnbZOcGPWASy6WxLJ5qKr6h937w__&Key-Pair-Id=K269JMAT9ZF4GZ" alt="Onboarding screen" class="img-full"/>
     </a>
-            <div class="img-caption">If there's not a project open, starter templates are outcome-oriented and get you going</div>
+    <div class="img-caption">If there's not a project open, starter templates are outcome-oriented and get you going</div>
 
+    <h2>From Idea to Implementation—Seamlessly</h2>
     
-    <p>Getting started isn't staring at a blank file. You pick from templates - SaaS app, ecommerce store, REST API, blog platform - or just describe what you want in plain English of course. The IDE understands the shape of what you're building and sets up the scaffolding accordingly, suggesting the right stack for the job.</p>
+    <p>Getting started isn't a blank file. Instead, you choose outcome-oriented templates (SaaS app, ecommerce store, REST API, blog platform) or simply describe your goal in plain English. The IDE recognizes your intent, sets up scaffolding automatically, and suggests appropriate tech stacks.</p>
 
     <div class="img-container-inline">
         <a href="https://media.cleanshot.cloud/media/98343/etHR22PNw0TVLhl11oKkpR0TtMnolruP5hrJMcvg.jpeg?Expires=1749324547&Signature=AWut3ZxL4Sx-sQKED6kCYSLqdqVPktNbSScRVEZoyIG7YvUegkytHoUK-FZFFbsTa6JxLZvSozrhwUTvWahjxzIfBJONFSNCl1vz1oHS7~vwY3oOoasz0tqUgoVqwCThfxvLoaa2R7FoMIMJ8LPs1RlkdnKAOo2ZBlQC1UDxIqipiX0hkW4KjkXOGCP1qt6PphCJLn6m6Y6P1lULuaQOqO2aw376R~8XVDdhdEX0YghkiYkjAu1DvT-iviBozqOeGTHRJ2fuh4APrw-KVJYa0d5ZTjCVFsh1STmNltvh5w2d1Qfq3Mdu5nNHhkdf8seMu-TgjapZeQgMX2MJZU9-ZQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
@@ -154,55 +271,49 @@
         <div class="img-caption">The task detail view shows all the meta-data about the version</div>
     </div>
     
-    <p><em>Ok so what's the core loop?</em></p>
-    <ol>
-      <li>Describe what you want</li>
-      <li>The agent creates an implementation plan via markdown. It will follow this through its development of the feature</li>
-      <li>If needed, the agent will add or update any tests based on the changes</li>
-      <li>Before marking it as ready to review, the test suite runs automatically</li>
-      <li>The human ultimately approves the change, and doing so creates a new version of the app that can be deployed to production</li>
-    </ol>
-    
-    <div class="clear"></div>
-    
-
-    <p>Multiple tasks can be run in parallel and monitored individually.</p>
-    
-    <p>The rest of the interface reflects this task-centric thinking. The primary window is a preview. If you're building for the web like me, visual iteration is the core loop. There's no separation between "writing code" and "talking to AI" and "seeing the thing". Context flows naturally between what you're looking at, what you're thinking about, and what you want to happen next.</p>
+    <p>The primary window reflects task-centric thinking, focusing on a visual preview—essential for web-based development. There's no artificial separation between "writing code," "conversing with AI," and "viewing outcomes." Context naturally flows among these interactions.</p>
 
     <div class="clear"></div>
+
+    <h2>Built-in Data Exploration</h2>
+    
+    <p>Inspired by frameworks like Django, the IDE includes a native database viewer and admin panel. You can effortlessly explore your data schema and visualize records. A built-in chatbot assistant provides insights directly from your data context—like having an analyst embedded in your environment.</p>
 
     <a href="https://media.cleanshot.cloud/media/98343/95WptyLcT0WpBN5X9R0N0iUe2FfgNZcUnyMWQU9E.jpeg?Expires=1749324866&Signature=n6fAThgOMcbKbrSMV3AeO6zWBVpKmmASM3zFH9qfCEqDJIFDuYDxcbYI0SoGa3-j6YZDq3Pkm75T-mCidnPPiej3KJz5AFUTCGRn3dxvu2GR6c-Q2hVA2k4egn-dY3vhBKMmnAJRFYUC7cKYqFD8Wa48uyY9VKU~GZjkUKPLpXGGknPLm9hf~iIZHL5FlV84IBhRNF3bC520tZebiFWGXt6VtsATwslFhPYsAcv8SbxLI2VOvS5A29ix~nqhZkyqwFU4I7Rk8V~KfbG3u7wpljZJmZzLiTg-iyIECMDtWNdUN3xoltRHBpNHkHtUaHnKKGv9qtbIJX36RlXRJPt85A__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
         <img src="https://media.cleanshot.cloud/media/98343/95WptyLcT0WpBN5X9R0N0iUe2FfgNZcUnyMWQU9E.jpeg?Expires=1749324866&Signature=n6fAThgOMcbKbrSMV3AeO6zWBVpKmmASM3zFH9qfCEqDJIFDuYDxcbYI0SoGa3-j6YZDq3Pkm75T-mCidnPPiej3KJz5AFUTCGRn3dxvu2GR6c-Q2hVA2k4egn-dY3vhBKMmnAJRFYUC7cKYqFD8Wa48uyY9VKU~GZjkUKPLpXGGknPLm9hf~iIZHL5FlV84IBhRNF3bC520tZebiFWGXt6VtsATwslFhPYsAcv8SbxLI2VOvS5A29ix~nqhZkyqwFU4I7Rk8V~KfbG3u7wpljZJmZzLiTg-iyIECMDtWNdUN3xoltRHBpNHkHtUaHnKKGv9qtbIJX36RlXRJPt85A__&Key-Pair-Id=K269JMAT9ZF4GZ" alt="The data explorer is a built-in view into the database with a chatbot assistant" class="img-full"/>
     </a>
-            <div class="img-caption">A native database view, with a chatbot that has your data as context, because why not?</div>
+    <div class="img-caption">A native database view, with a chatbot that has your data as context, because why not?</div>
 
+    <h2>Simple, Clear Production Workflow</h2>
     
-    <p>There's a data explorer and admin panel built in natively (I always loved this about Django). You can poke around your database, visualize data, and even ask the built-in chatbot questions about your schema data itself. It's like having a data analyst in your dev environment.</p>
+    <p>I suspect many vibecoders struggle with traditional environment management. This prototype features an intuitive local-to-production toggle—think Stripe's test mode switch but for your app. Flip the switch to seamlessly view live data, users, and everything else, then toggle back safely to local development.</p>
     
     <a href="https://media.cleanshot.cloud/media/98343/6lX9DJsrlpCCUyeqOXJxpgImoazQqxkJ2AIJoL61.jpeg?Expires=1749324983&Signature=hGNx9DANsuqra8dsByZVGVT5HwIKXbD6D6SEDlO9EvNzySk~i4NKF2kp5r9auGWX5azuU3XD0K-eOkh3Fgu3zlYu9egfoGva1H3wrFLvobJ13LhLq00DgdL16c-Ocokg8-SM-Ci3aGZ1A5VHzCeb2MDfZvQgutAe~YmWq3-hPhKZQVs5OywA0vXxnPTlE3F1uEI37zIc4LRhHA3qlZMXCntPLh0rLHn5nClEghrQf1DyQ36SSykZSaD7Sum4Ol7H9b8DMR7b9pMqfbdtRJppAjrr8cfiFX0-nXn~uPSdV6jfesd4tE394Kf6nhvQYQLBRt4nBWKdMXxDUvi3D~IrJw__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
         <img src="https://media.cleanshot.cloud/media/98343/6lX9DJsrlpCCUyeqOXJxpgImoazQqxkJ2AIJoL61.jpeg?Expires=1749324983&Signature=hGNx9DANsuqra8dsByZVGVT5HwIKXbD6D6SEDlO9EvNzySk~i4NKF2kp5r9auGWX5azuU3XD0K-eOkh3Fgu3zlYu9egfoGva1H3wrFLvobJ13LhLq00DgdL16c-Ocokg8-SM-Ci3aGZ1A5VHzCeb2MDfZvQgutAe~YmWq3-hPhKZQVs5OywA0vXxnPTlE3F1uEI37zIc4LRhHA3qlZMXCntPLh0rLHn5nClEghrQf1DyQ36SSykZSaD7Sum4Ol7H9b8DMR7b9pMqfbdtRJppAjrr8cfiFX0-nXn~uPSdV6jfesd4tE394Kf6nhvQYQLBRt4nBWKdMXxDUvi3D~IrJw__&Key-Pair-Id=K269JMAT9ZF4GZ" alt="In 'production' mode, deployments match up 1:1 with tasks, so its easy to track what's in front of customers" class="img-full"/>
     </a>
-            <div class="img-caption">Production view shows 'tasks' as 'app versions'.</div>
+    <div class="img-caption">Production view shows 'tasks' as 'app versions'.</div>
+    
+    <p>Instead of the conventional write-compile-debug cycle, this approach fosters fluid collaboration, like sketching and refining ideas in real-time. Your IDE becomes a genuine partner rather than an advanced typewriter.</p>
 
-    
-    <p>I suspect a lot of non-technical vibecoder get caught up on environment management (the whole "guys check out this app I just made: http://localhost:3000" meme). The local-to-production workflow in my prototype is really simple. Think Stripe's test mode toggle, but for your app. One switch, and you're looking at live data, live users, live everything. Switch back to local safety with a click.</p>
-    
-    <div class="clear"></div>
-                <div class="img-container-inline">
+    <div class="img-container-inline">
         <a href="https://media.cleanshot.cloud/media/98343/yfm0xTgmsYyjXMAcYAPK0CgHJvlsgEuBbtwtegXT.jpeg?Expires=1749324697&Signature=N3pZAipTBIEaEQu2oUyohFcDftVdDu~hDQRGV46CT~Mx5q1EJBpu47cFVD-aXxZPKmOfTAo7lRx~N~yFpO7Kc5LIaRJsO2HHqQg7UsHXvC89s2fGPjHIO988VhlfPzNksuNbVKFLgSRIWWScsPg1-oyn9KlzVhOCQwQSGH4fOHMsmxY2hC3yrYJoSmgki6U2~nHr1lZFQGT7BsbRYD3YLmXRcMpIk7KaQAys2PclQsAjbn9WDQf5l3qUT8Q9WQ89TizeBI7XGCVd9VNTY1s2lkTJvjYQbc6uMuFknYMwFVh5oiE56vkrE8LKeoJdB5TaHSNWUdkAyp3DA7JjAzlMhQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
             <img src="https://media.cleanshot.cloud/media/98343/yfm0xTgmsYyjXMAcYAPK0CgHJvlsgEuBbtwtegXT.jpeg?Expires=1749324697&Signature=N3pZAipTBIEaEQu2oUyohFcDftVdDu~hDQRGV46CT~Mx5q1EJBpu47cFVD-aXxZPKmOfTAo7lRx~N~yFpO7Kc5LIaRJsO2HHqQg7UsHXvC89s2fGPjHIO988VhlfPzNksuNbVKFLgSRIWWScsPg1-oyn9KlzVhOCQwQSGH4fOHMsmxY2hC3yrYJoSmgki6U2~nHr1lZFQGT7BsbRYD3YLmXRcMpIk7KaQAys2PclQsAjbn9WDQf5l3qUT8Q9WQ89TizeBI7XGCVd9VNTY1s2lkTJvjYQbc6uMuFknYMwFVh5oiE56vkrE8LKeoJdB5TaHSNWUdkAyp3DA7JjAzlMhQ__&Key-Pair-Id=K269JMAT9ZF4GZ" alt=""/>
         </a>
         <div class="img-caption">Tasks that are ready for your human review show how the test suite performed and support easy preview links</div>
-    
-                    <p>Instead of the traditional write-compile-debug cycle, you get something more fluid. More like sketching ideas and refining them in real time. Your computer becomes a collaborator instead of an expensive electronic typewriter.</p>
-                </div>
-    <p>I kept thinking about <a href="https://en.wikipedia.org/wiki/Coda_(web_development_software)">Coda</a>, which had this beautiful simplicity where everything just worked together from CSS to HTML to the preview itself. I think another interesting analogy is <a href="https://canva.com" target="_blank">Canva</a>, which re-imagined 'desktop publishing' (something that, for decades, required expensive, complicated, professional software suites) as something within reach to anyone, regardless of their creative experience. Software engineering (or maybe more specifically, 'application development') is undergoing a similar democratization. Our tools will need to follow.</p> 
+    </div>
 
- 
+    <h2>Democratizing Application Development</h2>
     
-    <p>This is still rough around the edges and just a prototype. Lots of assumptions baked in that probably don't hold for different kinds of development. But it was fun to build, and I learned something about what I actually want from my tools.</p>
+    <p>This prototype recalls tools like <a href="https://en.wikipedia.org/wiki/Coda_%28web_development_software%29">Coda</a>, where every part—from CSS to HTML to preview—felt unified. Similarly, <a href="https://canva.com">Canva</a> democratized desktop publishing, turning previously complex tasks into accessible, intuitive processes.</p>
     
-    <p>Reach out if you have thoughts or are interested in jamming on this together! I'm at jordan@fulghum.io.</p>
+    <p>Application development is undergoing similar democratization. Our tools must follow suit, embracing the conversational, iterative, and collaborative ways we code today.</p>
+
+    <div class="clear"></div>
+
+    <hr>
+    
+    <p>This IDE is still very much a prototype—rough around the edges and full of assumptions—but building it helped clarify what I genuinely want from my tools.</p>
+    
+    <p>If you have thoughts or want to jam on this idea, reach out! I'm at <a href="mailto:jordan@fulghum.io">jordan@fulghum.io</a>.</p>
 </body>
 </html>
