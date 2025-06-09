@@ -226,7 +226,7 @@
         <div class="img-caption">The core IDE, showing a demo SaaS app ("PropertySync") in the preview pane</div>
     </div>
 
-    <p>Like most devs, I've spent the last six months adjusting to this new AI-assisted coding landscape. While vibecoding has become my <em>default</em> way of working, existing tools consistently fall short.</p>
+    <p>Like most devs, I've spent the last six months adjusting to this new AI-assisted coding world. Very quickly vibecoding has become my default way of working, but I find that existing tools fall short during this transition.</p>
     
     <p>Current IDEs feel compromised:</p>
     
@@ -234,23 +234,23 @@
         <li><strong>Cursor</strong> bolts AI onto VS Code's legacy architecture, cramming its primary interaction into a third of the window.</li>
         <li><strong>Claude Code</strong> gets closer to the conversational model but strips away too much context so it feels like coding through a keyhole.</li>
         <li><strong>Codex</strong> optimizes for pull requests, neglecting immediate, iterative cycles.</li>
-        <li><strong>Replit</strong> simplifies technical details but isolates its LLM as a mere add-on rather than integrating it fundamentally into the development process.</li>
+        <li><strong>Replit</strong> simplifies technical details but isolates its LLM as another abstraction rather than integrating it natively into the development process.</li>
     </ul>
     
-    <p>What struck me is that we've approached this backward. Instead of forcing conversational interactions onto traditional IDE architectures, we need tools built explicitly around conversation. We're currently in the <a href="https://koomen.dev/essays/horseless-carriages/">"horseless carriage"</a> phase of software development.</p>
+    <p>What I think I've realized is that we've approached this backward. Instead of forcing conversational interactions onto traditional IDE architectures, we need tools built primarily around conversation. We're currently in the <a href="https://koomen.dev/essays/horseless-carriages/">"horseless carriage"</a> phase of software development.</p>
 
-    <h2>Introducing a Task-Centric, Conversational IDE</h2>
+    <h2>A Task-Centric, Conversational IDE</h2>
     
-    <p>I prototyped a native Mac IDE from scratch, centered around the reality of modern application development—conversations with an LLM as the primary interface. The core insight is that coding today isn't about managing files and directories but about managing context, intent, and tasks. You're constantly navigating between questions like "show me this," "change that," and "make it work."</p>
+    <p>I prototyped a native Mac IDE from scratch, centered around the reality of modern application development—conversations with an LLM as the primary interface. The core insight is that coding today isn't about managing files and directories but about managing context, intent, and <em>tasks</em> You're constantly navigating between questions like "show me this," "change that," and "make it work."</p>
     
-    <p>The atomic unit of work isn't a file or a project—it's a task. Think feature branches, but richer:</p>
+    <p>The atomic unit of work isn't a file or a project—it's a task. Think feature branches, but richer. Here's the core loop:</p>
     
     <ol>
         <li><strong>Describe what you want</strong> in natural language.</li>
         <li><strong>The agent creates a markdown-based implementation plan</strong>, which evolves dynamically.</li>
         <li><strong>Automated tests</strong> are created and updated as changes happen.</li>
         <li><strong>Test suites automatically run</strong> before marking a task as ready.</li>
-        <li><strong>Human review and approval</strong> trigger deployment to production, linking tasks directly to deployed versions.</li>
+        <li><strong>Human review and approval</strong> trigger deployment to production, linking tasks directly to application versions.</li>
     </ol>
     
     <p>Multiple tasks run concurrently, each managing their own context and state. Reverting or undoing a deployment is as simple as a single click.</p>
@@ -260,9 +260,10 @@
     </a>
     <div class="img-caption">If there's not a project open, starter templates are outcome-oriented and get you going</div>
 
-    <h2>From Idea to Implementation—Seamlessly</h2>
+    <h2>Solving the Blank Page Problem</h2>
     
-    <p>Getting started isn't a blank file. Instead, you choose outcome-oriented templates (SaaS app, ecommerce store, REST API, blog platform) or simply describe your goal in plain English. The IDE recognizes your intent, sets up scaffolding automatically, and suggests appropriate tech stacks.</p>
+    <p>Vibecoding increases my ambition level, and I consequently am creating more new projects/repositories than ever. But LLMs haven't yet made it easier to start building new apps; picking a stack, running the right commands, getting the database schema and system architecture framed out before writing views, etc.</p>
+    <p>Here, getting started isn't staring at a blank file. Instead, you choose outcome-oriented templates (SaaS app, ecommerce store, REST API, blog platform) or simply describe your goal in plain English. The IDE recognizes your intent, sets up scaffolding automatically, and suggests appropriate tech stacks.</p>
 
     <div class="img-container-inline">
         <a href="https://media.cleanshot.cloud/media/98343/etHR22PNw0TVLhl11oKkpR0TtMnolruP5hrJMcvg.jpeg?Expires=1749324547&Signature=AWut3ZxL4Sx-sQKED6kCYSLqdqVPktNbSScRVEZoyIG7YvUegkytHoUK-FZFFbsTa6JxLZvSozrhwUTvWahjxzIfBJONFSNCl1vz1oHS7~vwY3oOoasz0tqUgoVqwCThfxvLoaa2R7FoMIMJ8LPs1RlkdnKAOo2ZBlQC1UDxIqipiX0hkW4KjkXOGCP1qt6PphCJLn6m6Y6P1lULuaQOqO2aw376R~8XVDdhdEX0YghkiYkjAu1DvT-iviBozqOeGTHRJ2fuh4APrw-KVJYa0d5ZTjCVFsh1STmNltvh5w2d1Qfq3Mdu5nNHhkdf8seMu-TgjapZeQgMX2MJZU9-ZQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
@@ -277,14 +278,14 @@
 
     <h2>Built-in Data Exploration</h2>
     
-    <p>Inspired by frameworks like Django, the IDE includes a native database viewer and admin panel. You can effortlessly explore your data schema and visualize records. A built-in chatbot assistant provides insights directly from your data context—like having an analyst embedded in your environment.</p>
+    <p>The IDE includes a native database viewer and admin panel (I always loved this about e.g. Django). You can explore your data schema and visualize records. A built-in chatbot assistant provides insights directly from your data context, like having an analyst embedded in your environment.</p>
 
     <a href="https://media.cleanshot.cloud/media/98343/95WptyLcT0WpBN5X9R0N0iUe2FfgNZcUnyMWQU9E.jpeg?Expires=1749324866&Signature=n6fAThgOMcbKbrSMV3AeO6zWBVpKmmASM3zFH9qfCEqDJIFDuYDxcbYI0SoGa3-j6YZDq3Pkm75T-mCidnPPiej3KJz5AFUTCGRn3dxvu2GR6c-Q2hVA2k4egn-dY3vhBKMmnAJRFYUC7cKYqFD8Wa48uyY9VKU~GZjkUKPLpXGGknPLm9hf~iIZHL5FlV84IBhRNF3bC520tZebiFWGXt6VtsATwslFhPYsAcv8SbxLI2VOvS5A29ix~nqhZkyqwFU4I7Rk8V~KfbG3u7wpljZJmZzLiTg-iyIECMDtWNdUN3xoltRHBpNHkHtUaHnKKGv9qtbIJX36RlXRJPt85A__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
         <img src="https://media.cleanshot.cloud/media/98343/95WptyLcT0WpBN5X9R0N0iUe2FfgNZcUnyMWQU9E.jpeg?Expires=1749324866&Signature=n6fAThgOMcbKbrSMV3AeO6zWBVpKmmASM3zFH9qfCEqDJIFDuYDxcbYI0SoGa3-j6YZDq3Pkm75T-mCidnPPiej3KJz5AFUTCGRn3dxvu2GR6c-Q2hVA2k4egn-dY3vhBKMmnAJRFYUC7cKYqFD8Wa48uyY9VKU~GZjkUKPLpXGGknPLm9hf~iIZHL5FlV84IBhRNF3bC520tZebiFWGXt6VtsATwslFhPYsAcv8SbxLI2VOvS5A29ix~nqhZkyqwFU4I7Rk8V~KfbG3u7wpljZJmZzLiTg-iyIECMDtWNdUN3xoltRHBpNHkHtUaHnKKGv9qtbIJX36RlXRJPt85A__&Key-Pair-Id=K269JMAT9ZF4GZ" alt="The data explorer is a built-in view into the database with a chatbot assistant" class="img-full"/>
     </a>
     <div class="img-caption">A native database view, with a chatbot that has your data as context, because why not?</div>
 
-    <h2>Simple, Clear Production Workflow</h2>
+    <h2>To Production</h2>
     
     <p>I suspect many vibecoders struggle with traditional environment management (the whole 'hey guys look at this new app i built: http://localhost:3000' meme). This prototype features an intuitive local-to-production toggle—think Stripe's test mode switch but for your app. Flip the switch to seamlessly view live data, users, and everything else, then toggle back safely to local development.</p>
     
@@ -293,7 +294,7 @@
     </a>
     <div class="img-caption">Production view shows 'tasks' as 'app versions'.</div>
     
-    <p>Instead of the conventional write-compile-debug cycle, this approach fosters fluid collaboration, like sketching and refining ideas in real-time. Your IDE becomes a genuine partner rather than an advanced typewriter.</p>
+    <p>Instead of the conventional write-compile-debug cycle, this approach fosters fluid collaboration, like sketching and refining ideas in real-time. Your IDE becomes a genuine partner rather than an advanced typewriter. It's more like managing a team of engineers working in parallel.</p>
 
     <div class="img-container-inline">
         <a href="https://media.cleanshot.cloud/media/98343/yfm0xTgmsYyjXMAcYAPK0CgHJvlsgEuBbtwtegXT.jpeg?Expires=1749324697&Signature=N3pZAipTBIEaEQu2oUyohFcDftVdDu~hDQRGV46CT~Mx5q1EJBpu47cFVD-aXxZPKmOfTAo7lRx~N~yFpO7Kc5LIaRJsO2HHqQg7UsHXvC89s2fGPjHIO988VhlfPzNksuNbVKFLgSRIWWScsPg1-oyn9KlzVhOCQwQSGH4fOHMsmxY2hC3yrYJoSmgki6U2~nHr1lZFQGT7BsbRYD3YLmXRcMpIk7KaQAys2PclQsAjbn9WDQf5l3qUT8Q9WQ89TizeBI7XGCVd9VNTY1s2lkTJvjYQbc6uMuFknYMwFVh5oiE56vkrE8LKeoJdB5TaHSNWUdkAyp3DA7JjAzlMhQ__&Key-Pair-Id=K269JMAT9ZF4GZ" target="_blank">
@@ -304,15 +305,15 @@
 
     <h2>Application Development for Everyone</h2>
     
-    <p>This prototype recalls tools like <a href="https://en.wikipedia.org/wiki/Coda_%28web_development_software%29">Coda</a>, where every part—from CSS to HTML to preview—felt unified. Similarly, <a href="https://canva.com">Canva</a> democratized desktop publishing, turning previously complex tasks into accessible, intuitive processes.</p>
+    <p>When building this, I couldn't help but fondly recall tools like <a href="https://en.wikipedia.org/wiki/Coda_%28web_development_software%29">Coda</a>, where every part—from CSS to HTML to preview—felt unified. Similarly, <a href="https://canva.com">Canva</a> democratized desktop publishing, turning previously complex tasks into accessible, intuitive processes with the right level of abstractions that lowered the barrier to entry.</p>
     
-    <p>Application development is undergoing similar democratization. Our tools must follow suit, embracing the conversational, iterative, and collaborative ways we code today.</p>
+    <p>Application development is undergoing similar democratization. Our tools should follow suit and embrace the conversational, iterative, and collaborative ways we code today.</p>
 
     <div class="clear"></div>
 
     <hr>
     
-    <p>This IDE is still very much a prototype—rough around the edges and full of assumptions—but building it helped clarify what I genuinely want from my tools.</p>
+    <p>This IDE is still very much a prototype—rough around the edges and full of assumptions—but building it helped clarify what I actually want from my tools.</p>
     
     <p>If you have thoughts or want to jam on this idea, reach out! I'm at <a href="mailto:jordan@fulghum.io">jordan@fulghum.io</a>.</p>
 </body>
