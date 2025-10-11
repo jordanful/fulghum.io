@@ -247,10 +247,6 @@
 
     <h2>The Setup</h2>
 
-    <div class="img-container-inline">
-        <img src="album-cards-plexamp.png" alt="PlexAmp NFC tag programming process"/>
-        <div class="img-caption">PlexAmp has first-class support for programming NFC tags with auto play mode.</div>
-    </div>
     <p>I needed to get the music into a format that could be played. I've long since surrendered to streaming, but I still have my MP3s organized via <a href="https://plex.tv" target="_blank" rel="noopener noreferrer">Plex</a> on my home server. Funny to think that these files are the same MP3s that I've been collecting since the late 90s. I wanted the NFC tag to be deep-linked to those same files instead of a streaming service.</p>
     <p>But which albums do I pick? I had the idea to create themed "packs" of albums. The first pack is obviously "Albums That Dad Wants You to Listen To", and it's just a bunch of dad rock. But the idea is that each pack can be a different theme or genre, and he can build his own collection (and develop his own taste) over time. </p>
 
@@ -260,10 +256,14 @@
 
 
     <h3>The Aspect Ratio Goof</h3>
+    <div class="img-container-inline">
+        <img src="album-cards-cassette.jpeg" alt="A cassette tape of London Calling by The Clash"/>
+        <div class="img-caption">We can do better than this.</div>
+    </div>
 
     <p>I was quite far into this project when I remembered the obvious fact that album art is square but trading cards are rectangular. Trading cards use a 2.5:3.5 aspect ratio, which is...not a square! Oops.</p>
 
-    <p>I looked at what they did for cassette tapes (also rectangular) back in the day, but their solutions were all over the place, from just cropping the square into a rectangle (gross) to having a giant white space next to the square art. That wasn't gonna cut it.</p>
+    <p>I looked at what they did for cassette tapes (also rectangular) back in the day, but their solutions were all over the place, from just cropping the square into a rectangle (gross) to having a giant white space and ISBN codes surrounding theart. That wasn't gonna cut it.</p>
 
     <p>So, I used an AI diffusion model to extend each album's art into a trading card aspect ratio. The AI was (mostly) able to extend the artwork while maintaining the original style and composition. Not perfect, but a pretty fun solution not possible just a couple years ago.</p>
     <div class="img-container-full">
@@ -273,7 +273,11 @@
 
     <p>After ordering a bundle of blank NFC tags from Amazon, I learned that <a href="https://plexamp.com" target="_blank" rel="noopener noreferrer">PlexAmp</a> oddly has first-class support for zapping NFC tags to specific albums in auto play mode. A strange feature, but perfect for this project. Easy.</p>
  
-    <p>The process was simple: open PlexAmp, navigate to an album, tap the three dots menu, and there's a "Program NFC Tag" option. Hold your phone over the blank NFC tag and it writes the deep link. That's it. The tag just contains a URL that opens PlexAmp and starts playing that specific album when tapped.</p>
+    <div class="img-container-full">
+        <img src="album-cards-plexamp.png" alt="PlexAmp NFC tag programming process" style="max-width: 50%; margin: 0 auto; display: block;"/>
+        <div class="img-caption" style="max-width: 50%; margin: 0 auto;">PlexAmp has first-class support for programming NFC tags with auto play mode.</div>
+    </div>
+    <p>The process was simple: open PlexAmp, navigate to an album, tap the three dots menu, then Share, and there's a "Program NFC Tag" option. Hold your phone over the blank NFC tag and it writes the deep link. That's it. The tag just contains a URL that opens PlexAmp and starts playing that specific album when tapped.</p>
     
     
     <div class="img-container-inline">
