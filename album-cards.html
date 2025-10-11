@@ -217,6 +217,28 @@
                 font-size: 1.25rem;
             }
         }
+        
+        /* PlexAmp image responsive sizing */
+        .plexamp-image {
+            max-width: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .plexamp-caption {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .plexamp-image {
+                max-width: 100%;
+            }
+            
+            .plexamp-caption {
+                max-width: 100%;
+            }
+        }
     </style>
     
 </head>
@@ -274,8 +296,8 @@
     <p>After ordering a bundle of blank NFC tags from Amazon, I learned that <a href="https://plexamp.com" target="_blank" rel="noopener noreferrer">PlexAmp</a> oddly has first-class support for zapping NFC tags to specific albums in auto play mode. A strange feature, but perfect for this project. Easy.</p>
  
     <div class="img-container-full">
-        <img src="album-cards-plexamp.png" alt="PlexAmp NFC tag programming process" style="max-width: 50%; margin: 0 auto; display: block;"/>
-        <div class="img-caption" style="max-width: 50%; margin: 0 auto;">PlexAmp has first-class support for programming NFC tags with auto play mode.</div>
+        <img src="album-cards-plexamp.png" alt="PlexAmp NFC tag programming process" class="plexamp-image"/>
+        <div class="img-caption plexamp-caption">PlexAmp has first-class support for programming NFC tags with auto play mode.</div>
     </div>
     <p>The process was simple: open PlexAmp, navigate to an album, tap the three dots menu, then Share, and there's a "Program NFC Tag" option. Hold your phone over the blank NFC tag and it writes the deep link. That's it. The tag just contains a URL that opens PlexAmp and starts playing that specific album when tapped.</p>
     
