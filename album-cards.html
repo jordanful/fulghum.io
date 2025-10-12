@@ -239,6 +239,31 @@
                 max-width: 100%;
             }
         }
+        
+        /* Side-by-side image layout */
+        .img-container-side-by-side {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .img-side {
+            flex: 1;
+        }
+        
+        .img-side img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .img-container-side-by-side {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
     </style>
     
 </head>
@@ -306,16 +331,15 @@
         <video controls preload="metadata" playsinline width="640"><source src="album-cards-printing.mp4"/></video>
     </div>
     <p>I printed the cards on our crappy HP inkjet printer at home. I used label paper that exactly matched the dimensions of trading cards, but after the fact, I realized it was kind of unnecessary. You can just print on cardstock if you have a digital template file.  I cut them out and glued them to blank playing cards, but not before wedging the NFC tags between.</p>
-    <div class="img-container-full">
-        <img src="album-cards-nfc.png" alt="NFC tag programming process showing phone and NFC tag"/>
-        <div class="img-caption">NFC assembly line</div>
-    </div>
-
-
-
-    <div class="img-container-full">
-        <img src="album-cards-beck.jpeg" alt="Beck album card showing the detailed artwork"/>
-        <div class="img-caption">The grass on the lower-third of this card is not naturally occurring.</div>
+    <div class="img-container-side-by-side">
+        <div class="img-side">
+            <img src="album-cards-nfc.png" alt="NFC tag programming process showing phone and NFC tag"/>
+            <div class="img-caption">NFC assembly line</div>
+        </div>
+        <div class="img-side">
+            <img src="album-cards-beck.jpeg" alt="Beck album card showing the detailed artwork"/>
+            <div class="img-caption">The grass on the lower-third of this card is not naturally occurring.</div>
+        </div>
     </div>
 
     <p>For placement, I found a trading card display model from <a href="https://makerworld.com" target="_blank" rel="noopener noreferrer">Makerworld</a> and 3D printed it on my <a href="https://bambulab.com/en-us/a1" target="_blank" rel="noopener noreferrer">A1</a>. It turned out alright!</p>
