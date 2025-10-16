@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocalMaze - A 60-Second Screen for Cognitive Decline</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
+    <meta name="description" content="A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.">
+    <meta name="author" content="Jordan Fulghum">
+    <meta name="keywords" content="VocalMaze, dementia screening, cognitive decline, machine learning, healthcare, XLNet, DementiaBank, privacy, language analysis">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fulghum.io/vocalmaze">
+    <meta property="og:title" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
+    <meta property="og:description" content="A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.">
+    <meta property="og:image" content="https://fulghum.io/cookie-test.png">
+    <meta property="og:image:alt" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
+    <meta property="og:site_name" content="Jordan Fulghum">
+    <meta property="article:author" content="Jordan Fulghum">
+    <meta property="article:published_time" content="2025-10-16T00:00:00Z">
+    <meta property="article:section" content="Healthcare Technology">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Healthcare">
+    <meta property="article:tag" content="Dementia">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fulghum.io/vocalmaze">
+    <meta property="twitter:title" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
+    <meta property="twitter:description" content="A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.">
+    <meta property="twitter:image" content="https://fulghum.io/cookie-test.png">
+    <meta property="twitter:image:alt" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
+    <meta property="twitter:creator" content="@jordanful">
+    <meta property="twitter:site" content="@jordanful">
+
+    <!-- Additional Meta Tags for Rich Snippets -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://fulghum.io/vocalmaze">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "VocalMaze - A 60-Second Screen for Cognitive Decline",
+      "description": "A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.",
+      "image": "https://fulghum.io/vocalmaze-image.png",
+      "author": {
+        "@type": "Person",
+        "name": "Jordan Fulghum",
+        "url": "https://x.com/jordanful"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jordan Fulghum"
+      },
+      "datePublished": "2025-10-16",
+      "dateModified": "2025-10-16",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fulghum.io/vocalmaze"
+      },
+      "keywords": ["VocalMaze", "dementia screening", "cognitive decline", "machine learning", "healthcare", "XLNet", "privacy"],
+      "articleSection": "Healthcare Technology"
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Image container for full-width images */
+        .img-container-full {
+            display: block;
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        /* Image container for inline images */
+        .img-container-inline {
+            float: right;
+            margin: 0 0 1rem 1.5rem;
+            max-width: 300px;
+            clear: right;
+        }
+
+        /* Caption styling */
+        .img-caption {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        video {
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+        /* Clear floats after paragraphs with inline images */
+        .clear {
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem 1rem;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+            }
+
+            .img-container-inline {
+                float: none;
+                margin: 1rem 0;
+                max-width: 100%;
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Cookie test image responsive sizing */
+        .cookie-image {
+            max-width: 50%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .cookie-caption {
+            max-width: 50%;
+            margin: 0.5rem auto 0;
+        }
+
+        @media (max-width: 768px) {
+            .cookie-image {
+                max-width: 100%;
+            }
+
+            .cookie-caption {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1>VocalMaze</h1>
+    <p>by <a href="https://x.com/jordanful">Jordan Fulghum</a>, October 2025</p>
+
+    <p>My mom has dementia.</p>
+
+    <p>Getting to that diagnosis took years. The early tests were slow, vague, and expensive. Some were so subjective that two clinicians could look at the same answers and disagree.</p>
+
+    <p>I've been working on something that might make that step a little easier - for families, and maybe one day for doctors too. It's called VocalMaze.</p>
+
+
+    <h2>What it does</h2>
+
+    <p>VocalMaze can screen for signs of cognitive decline in about 60 seconds. You're shown an image, and you just describe what you see out loud into your device's microphone.</p>
+
+    <div class="img-container-full">
+        <img src="cookie-test.png" alt="The Cookie Theft picture used in cognitive testing" class="cookie-image"/>
+        <div class="img-caption cookie-caption">The Cookie Theft picture from the Boston Diagnostic Aphasia Examination, used in dementia screening for decades.</div>
+    </div>
+
+    <p>The site transcribes what you say and runs that text through a transformer (AI) model I fine-tuned to predict whether a person's language patterns resemble those seen in dementia. It doesn't analyze sound, tone, or emotion - just language.</p>
+
+    <p>That's the most interesting thing I learned: we don't even need a waveform, or a spectogram, or a vocal embedding, or any audio. VocalMaze throws all of that away and just uses the text..<br>
+  </p>
+
+    <h2>How it works</h2>
+
+    <p>The model is a fine-tuned XLNet transformer trained on transcripts from DementiaBank, a public dataset used in clinical research. Each sample is a short description of a picture, labeled by whether the speaker was cognitively healthy or not.</p>
+
+    <p>Over time, you can see linguistic patterns: people with dementia use fewer nouns, more pronouns, shorter sentences, less temporal structure. The model learns those differences - the structure of thought showing up in syntax.</p>
+
+    <p>VocalMaze provides a statistical screen, not a medical diagnosis.
+    In testing, it's about 82% accurate, which is roughly the same performance as traditional screening methods that take far longer.</p>
+
+    <h2>Privacy</h2>
+
+    <p>VocalMaze doesn't store anything.
+    No accounts, no recordings, no transcripts, no results.
+    There's literally not a database backing it.</p>
+
+    <p>The browser uses the microphone API to capture your voice, sends it to a speech-to-text service, the text is analyzed, and then everything disappears. Nothing is kept on any server.</p>
+
+    <p>If you want to send the test to someone else - like a parent or spouse - you can do that discreetly. The app emails them a link that simply says "try this short voice test to measure your health." When they complete it, only you get the result. It's private, but not deceptive.</p>
+
+    <h2>Why I built it</h2>
+
+    <p>I wish this had existed when my mom started showing signs. I learned that language can tell us a lot before memory loss becomes visible.<br><br>
+    Most importantly, the first step in getting help shouldn't require navigating a system built for specialists instead of families.</p>
+
+    <p>VocalMaze is free and takes about a minute.<br><br>
+    You can try it at <a href="https://vocalmaze.com" target="_blank" rel="noopener noreferrer">vocalmaze.com</a></p>
+         
+    <hr/>
+    <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more antics.</p>
+    
+
+</body>
+</html>
