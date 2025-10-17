@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://fulghum.io/vocalmaze">
     <meta property="og:title" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
     <meta property="og:description" content="A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.">
-    <meta property="og:image" content="https://fulghum.io/cookie-test.png">
+    <meta property="og:image" content="https://fulghum.io/vocal-maze-mom.jpg">
     <meta property="og:image:alt" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
     <meta property="og:site_name" content="Jordan Fulghum">
     <meta property="article:author" content="Jordan Fulghum">
@@ -31,7 +31,7 @@
     <meta property="twitter:url" content="https://fulghum.io/vocalmaze">
     <meta property="twitter:title" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
     <meta property="twitter:description" content="A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.">
-    <meta property="twitter:image" content="https://fulghum.io/cookie-test.png">
+    <meta property="twitter:image" content="https://fulghum.io/vocal-maze-mom.jpg">
     <meta property="twitter:image:alt" content="VocalMaze - A 60-Second Screen for Cognitive Decline">
     <meta property="twitter:creator" content="@jordanful">
     <meta property="twitter:site" content="@jordanful">
@@ -244,7 +244,7 @@
 </head>
 <body>
     <h1>VocalMaze</h1>
-    <p>by <a href="https://x.com/jordanful">Jordan Fulghum</a>, October 2025</p>
+    <p>by <a href="https://fulghum.io">Jordan Fulghum</a>, October 2025</p>
 
     <p>My mom has dementia.</p>
 
@@ -264,14 +264,20 @@
 
     <p>The site transcribes what you say and runs that text through a transformer (AI) model I fine-tuned to predict whether a person's language patterns resemble those seen in dementia. It doesn't analyze sound, tone, or emotion - just language.</p>
 
-    <p>That's the most interesting thing I learned: we don't even need a waveform, or a spectogram, or a vocal embedding, or any audio. VocalMaze throws all of that away and just uses the text..<br>
+    <p>That's the most remarkable thing I learned: we don't even need a waveform, or a spectogram, or a vocal embedding, or any audio. VocalMaze throws all of that away and just uses the transcript. In our family's experience, a simple transcript beat every measurement tool the doctors threw at the problem.<br>
   </p>
 
+  <div class="img-container-inline">
+    <img src="vocal-maze-transcript.png" alt="Example transcript showing language patterns analyzed by VocalMaze"/>
+    <div class="img-caption">The classifier model only analyzes the transcript, not the audio, to screen for signs of cognitive decline.</div>
+</div>
     <h2>How it works</h2>
 
-    <p>The model is a fine-tuned XLNet transformer trained on transcripts from DementiaBank, a public dataset used in clinical research. Each sample is a short description of a picture, labeled by whether the speaker was cognitively healthy or not.</p>
+    <p>The model is a fine-tuned XLNet transformer trained on transcripts from  <a href="https://talkbank.org/dementia/access/" target="_blank" rel="noopener noreferrer">DementiaBank</a>, a public dataset used in clinical research. Each sample is a short description of a picture, labeled by whether the speaker was cognitively healthy or not.</p>
 
-    <p>Over time, you can see linguistic patterns: people with dementia use fewer nouns, more pronouns, shorter sentences, less temporal structure. The model learns those differences - the structure of thought showing up in syntax.</p>
+    <p>With even just a small amount of data, the neural network can identify linguistic patterns: people with dementia use fewer nouns, more pronouns, shorter sentences, less temporal structure. The model learns those differences - the structure of thought showing up in syntax.</p>
+
+
 
     <p>VocalMaze provides a statistical screen, not a medical diagnosis.
     In testing, it's about 82% accurate, which is roughly the same performance as traditional screening methods that take far longer.</p>
@@ -286,13 +292,18 @@
 
     <p>If you want to send the test to someone else - like a parent or spouse - you can do that discreetly. The app emails them a link that simply says "try this short voice test to measure your health." When they complete it, only you get the result. It's private, but not deceptive.</p>
 
+    <div class="img-container-full">
+        <img src="vocal-maze-mom.jpg" alt="A family photo from the late 1980s showing a mother and young child in their backyard"/>
+        <div class="img-caption">VocalMaze is for families like mine.</div>
+    </div>
     <h2>Why I built it</h2>
 
-    <p>I wish this had existed when my mom started showing signs. I learned that language can tell us a lot before memory loss becomes visible.<br><br>
+    <p>I wish this had existed when my mom started showing signs. I learned that language can tell us a lot before memory loss becomes visible. You just need to listen.<br><br>
     Most importantly, the first step in getting help shouldn't require navigating a system built for specialists instead of families.</p>
 
     <p>VocalMaze is free and takes about a minute.<br><br>
     You can try it at <a href="https://vocalmaze.com" target="_blank" rel="noopener noreferrer">vocalmaze.com</a></p>
+
          
     <hr/>
     <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more antics.</p>
