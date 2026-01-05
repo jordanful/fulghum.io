@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 is the year of self-hosting</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="2026 is the Year of Self-hosting">
+    <meta name="description" content="CLI agents like Claude Code make self-hosting dramatically easier and actually fun. This is the first time I would recommend it to normal software-literate people.">
+    <meta name="author" content="Jordan Fulghum">
+    <meta name="keywords" content="self-hosting, homelab, Docker, Tailscale, Claude Code, Vaultwarden, Immich, Plex, home server">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fulghum.io/self-hosting">
+    <meta property="og:title" content="2026 is the Year of Self-hosting">
+    <meta property="og:description" content="CLI agents like Claude Code make self-hosting dramatically easier and actually fun. This is the first time I would recommend it to normal software-literate people.">
+    <meta property="og:site_name" content="Jordan Fulghum">
+    <meta property="article:author" content="Jordan Fulghum">
+    <meta property="article:published_time" content="2026-01-05T00:00:00Z">
+    <meta property="article:section" content="Technology">
+    <meta property="article:tag" content="Self-Hosting">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="AI">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fulghum.io/self-hosting">
+    <meta property="twitter:title" content="2026 is the Year of Self-hosting">
+    <meta property="twitter:description" content="CLI agents like Claude Code make self-hosting dramatically easier and actually fun. This is the first time I would recommend it to normal software-literate people.">
+    <meta property="twitter:creator" content="@jordanful">
+    <meta property="twitter:site" content="@jordanful">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://fulghum.io/self-hosting">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "2026 is the Year of Self-hosting",
+      "description": "CLI agents like Claude Code make self-hosting dramatically easier and actually fun. This is the first time I would recommend it to normal software-literate people.",
+      "author": {
+        "@type": "Person",
+        "name": "Jordan Fulghum",
+        "url": "https://x.com/jordanful"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jordan Fulghum"
+      },
+      "datePublished": "2026-01-05",
+      "dateModified": "2026-01-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fulghum.io/self-hosting"
+      },
+      "keywords": ["self-hosting", "homelab", "Docker", "Tailscale", "Claude Code", "Vaultwarden", "Immich"],
+      "articleSection": "Technology"
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            font-weight: 600;
+            color: #555;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-container-full {
+            display: block;
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .img-container-inline {
+            float: right;
+            margin: 0 0 1rem 1.5rem;
+            max-width: 300px;
+            clear: right;
+        }
+
+        .img-caption {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        video {
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem 1rem;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.5rem 0.75rem;
+            }
+
+            .img-container-inline {
+                float: none;
+                margin: 1rem 0;
+                max-width: 100%;
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img,
+        .lightbox video {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .img-container-full img,
+        .img-container-inline img,
+        .img-container-full video,
+        .img-container-inline video {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .img-container-full img:hover,
+        .img-container-inline img:hover,
+        .img-container-full video:hover,
+        .img-container-inline video:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <h1>2026 is the Year of Self-hosting</h1>
+    <p>by <a href="https://fulghum.io">Jordan Fulghum</a>, January 2026</p>
+
+    <p><em>Claude Code done did it again</em></p>
+
+    <p>I have flirted with self-hosting for years. I always bounced off it - too much time spent configuring instead of using. It just wasn't fun.</p>
+
+    <p>That changed recently. The reason is simple: CLI agents like <a href="https://claude.com/claude-code" target="_blank" rel="noopener noreferrer">Claude Code</a> make self-hosting dramatically easier and actually fun.</p>
+
+    <p>This is the first time I would recommend it to normie/software-literate people who never really wanted to sign up to become a sysadmin and stress about uptime of core personal services.</p>
+
+    <h2>Why now is different</h2>
+
+    <p>Three things converged:</p>
+
+    <table>
+        <tr>
+            <th>Shift</th>
+            <th>Why it matters</th>
+        </tr>
+        <tr>
+            <td>Cheap, capable mini PCs</td>
+            <td>You can buy a silent, low-power Linux box for less than a weekend trip</td>
+        </tr>
+        <tr>
+            <td>Tailscale</td>
+            <td>Secure networking without port forwarding or networking brain damage</td>
+        </tr>
+        <tr>
+            <td>Claude Code</td>
+            <td>You no longer need to remember Docker syntax, Compose quirks, or config formats</td>
+        </tr>
+    </table>
+
+    <p>The last one is the real unlock.</p>
+
+    <p>Instead of Googling "docker compose vaultwarden caddy reverse proxy" and stitching together five blog posts from 2021, I just let Claude figure out (up to you how much you care to really understand the technical details!).</p>
+
+    <h2>The hardware</h2>
+
+    <div class="img-container-inline" style="max-width: 280px;">
+        <video controls preload="metadata" playsinline><source src="beelink.mp4" type="video/mp4"/></video>
+        <div class="img-caption">Fits in one hand. Check that central cooling unit!</div>
+    </div>
+
+    <p>I previously ran my Plex server on an M1 Mac mini, which was great, but as I wanted to add more services I found myself running a lot of resource-hungry VMs (via UTM) and it was getting complicated anytime the Mac rebooted. So, I picked up a <a href="https://www.bee-link.com/products/beelink-me-mini-n150" target="_blank" rel="noopener noreferrer">Beelink Mini N150</a>. It is small, quiet, and just barely sips power. I paid around $200 for the device and another few hundred USD for 8TB in NVMe SSD. It's pretty wild how accessible these mini PCs have become in recent years!</p>
+
+    <h2 style="clear: both;">The basic flow</h2>
+
+    <p>This is the entire workflow:</p>
+
+    <table>
+        <tr>
+            <th>Step</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Install Linux</td>
+            <td>Flash USB, install Ubuntu Server (I picked 22.04 LTS) </td>
+        </tr>
+        <tr>
+            <td>Install Tailscale</td>
+            <td>Get it on your private network to make your life easier</td>
+        </tr>
+        <tr>
+            <td>SSH in</td>
+            <td>From my laptop, anywhere</td>
+        </tr>
+        <tr>
+            <td>Install Claude Code</td>
+            <td>On the server itself</td>
+        </tr>
+        <tr>
+            <td>Ask for what I want</td>
+            <td>Go get a coffee</td>
+        </tr>
+    </table>
+
+
+
+    <h2>Claude Code is your new sysadmin</h2>
+
+    <p>This is the part that surprised me. I've been using Claude Code and other agentic CLIs for my day-to-day development, but as others are realizing, they are generalized computer agents and native to the terminal.</p>
+
+    <p>I installed Claude Code directly on the Linux box. Then I asked it things like:</p>
+
+    <ul>
+        <li>Set up Docker</li>
+        <li>Create a Docker Compose file</li>
+        <li>Install a service</li>
+        <li>Put services behind Caddy</li>
+        <li>Persist data properly</li>
+        <li>Keep my Docker images up to date</li>
+        <li>Set up reasonable security packages</li>
+        <li>Restart on boot so I never have to futz with it after an outage</li>
+    </ul>
+
+    <div class="img-container-full">
+        <img src="claude-code.png" alt="Claude Code running on the Linux server via SSH"/>
+        <div class="img-caption">Claude Code running directly on the server. Just describe what you want.</div>
+    </div>
+
+    <p>I didn't copy-paste YAML from the internet or have to do deep googling. I just asked.</p>
+
+    <h2>What's running</h2>
+
+    <p>I focused on things I already used, but wanted more control over - effectively starting to knock down the walled garden around my core services like passwords, photos, media.</p>
+
+    <table>
+        <tr>
+            <th>Service</th>
+            <th>What it replaces or does</th>
+        </tr>
+        <tr>
+            <td><a href="https://github.com/dani-garcia/vaultwarden" target="_blank" rel="noopener noreferrer">Vaultwarden</a></td>
+            <td>Bitwarden, but self-hosted and fast</td>
+        </tr>
+        <tr>
+            <td><a href="https://plex.tv" target="_blank" rel="noopener noreferrer">Plex</a></td>
+            <td>Media server</td>
+        </tr>
+        <tr>
+            <td><a href="https://immich.app" target="_blank" rel="noopener noreferrer">Immich</a></td>
+            <td>Google Photos replacement</td>
+        </tr>
+        <tr>
+            <td><a href="https://github.com/louislam/uptime-kuma" target="_blank" rel="noopener noreferrer">Uptime Kuma</a></td>
+            <td>Simple service monitoring</td>
+        </tr>
+        <tr>
+            <td><a href="https://caddyserver.com" target="_blank" rel="noopener noreferrer">Caddy</a></td>
+            <td>Reverse proxy with automatic TLS</td>
+        </tr>
+        <tr>
+            <td><a href="https://www.home-assistant.io" target="_blank" rel="noopener noreferrer">Home Assistant</a></td>
+            <td>Home automation hub</td>
+        </tr>
+        <tr>
+            <td><a href="https://readeck.org/en/" target="_blank" rel="noopener noreferrer">ReadDeck</a></td>
+            <td>Read-it-later. Honestly blown away by this one!</td>
+        </tr>
+    </table>
+
+    <p>Each one lives in its own container.</p>
+
+    <p>I can access everything from my phone, laptop, and tablet like it is local.</p>
+
+    <div class="img-container-full">
+        <img src="uptime-kuma.png" alt="Uptime Kuma dashboard showing service monitoring"/>
+        <div class="img-caption">Uptime Kuma keeping an eye on everything.</div>
+    </div>
+
+    <div class="img-container-inline" style="max-width: 250px;">
+        <img src="monitor.png" alt="Email inbox showing service up/down alerts"/>
+        <div class="img-caption">Automatic alerts via email give me peace of mind.</div>
+    </div>
+
+    <p>When something goes down, I get an email. When it comes back up, another email. No pager duty, no complex alerting rules. Just a simple ping that tells me if I need to care.</p>
+
+    <h3>Vaultwarden as the anchor</h3>
+
+    <p>Vaultwarden was kinda the "okay, this can work" moment.</p>
+
+    <p>It is a Bitwarden-compatible server written in Rust. Lightweight, reliable, and you can use the existing Bitwarden clients (like native apps and browser extensions). You can even set it as the default password manager on iOS, at the OS level!</p>
+
+    <p>Once that was running, I exported my passwords from iCloud/Keychain, imported them easily into Vaultwarden, and haven't looked back since.</p>
+
+    <p>That alone justified the box.</p>
+
+    <h3>Immich is actually great</h3>
+
+    <p>Immich is a serious Google Photos replacement. I thought I'd have to compromise and flinched a bit when I installed it. But nope, it's good. Mobile apps. Face recognition via a local (but slow) machine learning thread. Timeline and map view. Automatic uploads from your photo roll.</p>
+
+    <div class="img-container-full">
+        <img src="immich.png" alt="Immich photo timeline interface"/>
+        <div class="img-caption">Immich. This is not a compromise. This is better.</div>
+    </div>
+
+    <p>This is the kind of thing that used to feel fragile and half-baked when self-hosted. It does not anymore.</p>
+
+    <h3>ReadDeck fills the Pocket-shaped hole</h3>
+
+    <p>Mozilla killed Pocket. I needed a replacement.</p>
+
+    <p>I took a bet on ReadDeck. The UI is genuinely good. Clean typography, nice reading experience, good mobile support. It always remembers where I stopped reading and takes me right there. I even set up a shortcut that allows me to save an article for later right from mobile Firefox. Awesome.</p>
+
+    <div class="img-container-inline" style="max-width: 280px;">
+        <img src="read-deck.png" alt="ReadDeck interface showing saved articles"/>
+        <div class="img-caption">ReadDeck. No lock-in, no surprise subscription.</div>
+    </div>
+
+    <p>This is exactly the kind of thing self-hosting is perfect for. A small, personal tool that you actually use every day.</p>
+
+    <h2>Utilities for fun</h2>
+    <h3>Lazydocker</h3>
+
+    <p><a href="https://github.com/jesseduffield/lazydocker" target="_blank" rel="noopener noreferrer">Lazydocker</a> is a terminal UI for Docker. It shows you all your containers, logs, stats, and lets you restart or shell into anything with a few keystrokes.</p>
+
+    <p>I have been a huge fan of <a href="https://github.com/jesseduffield/lazygit" target="_blank">Lazygit</a> for some time. I think it's one of the best UIs I've ever used. So I was excited to learn that Lazydocker is basically that, but for monitoring Docker containers. No memorizing <code>docker ps</code> flags or grepping through logs. Just SSH in, type <code>lazydocker</code>, and everything is right there.</p>
+
+    <div class="img-container-full">
+        <img src="lazydocker.png" alt="Lazydocker terminal UI showing running containers"/>
+        <div class="img-caption">You feel like a superhero after you ssh in and see this</div>
+    </div>
+
+    <h3>Utilization</h3>
+    <p>For a fuller picture, <a href="https://github.com/nicolargo/glances" target="_blank" rel="noopener noreferrer">Glances</a> shows everything at once: CPU, memory, disk, network, and all running containers.</p>
+
+    <div class="img-container-full">
+        <img src="glances.png" alt="Glances system monitor showing CPU, memory, and container stats"/>
+        <div class="img-caption">Glances showing the whole picture. 13 containers, 6% CPU, 32% memory. This little box barely breaks a sweat.</div>
+    </div>
+
+    <p>That is 13 services running on a $200 mini PC, using about 4 GB of RAM and almost no CPU. The N150 is not a powerhouse, but it does not need to be.</p>
+
+    <h2>What it 'feels' like</h2>
+
+    <p>This does not feel like "running a server."</p>
+
+    <p>The feeling of ownership is powerful, but a bit hard to describe. I think you just have to try it, and I hope you get a strong feeling of <em>independence</em> like I have.</p>
+
+    <p>When something breaks, I SSH in, ask the agent what is wrong, and fix it. When I want to add something new, I describe it in plain English.</p>
+
+    <p>I am spending time using software, learning, and having fun - instead of maintaining it and stressing out about it.</p>
+
+    <h2>Who this is for</h2>
+
+    <p>This is for people who:</p>
+
+    <ul>
+        <li>Are comfortable in a terminal</li>
+        <li>Already pay for SaaS tools</li>
+        <li>Like understanding how things work</li>
+        <li>Do not want to become infra experts</li>
+    </ul>
+
+    <p>If that is you, I really think this is the year to try self-hosting.</p>
+
+    <p>For the first time, I would say this is not just viable. It is fun.</p>
+
+    <hr>
+
+    <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more.</p>
+
+    <div class="lightbox" id="lightbox"></div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+
+        document.querySelectorAll('.img-container-full img, .img-container-inline img, .img-container-full video, .img-container-inline video').forEach(el => {
+            el.addEventListener('click', () => {
+                const isVideo = el.tagName === 'VIDEO';
+                if (isVideo) {
+                    const video = document.createElement('video');
+                    video.src = el.querySelector('source').src;
+                    video.controls = true;
+                    video.autoplay = true;
+                    lightbox.innerHTML = '';
+                    lightbox.appendChild(video);
+                } else {
+                    lightbox.innerHTML = `<img src="${el.src}" alt="${el.alt}">`;
+                }
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.tagName === 'IMG') {
+                lightbox.classList.remove('active');
+                const video = lightbox.querySelector('video');
+                if (video) video.pause();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                const video = lightbox.querySelector('video');
+                if (video) video.pause();
+            }
+        });
+    </script>
+</body>
+</html>
