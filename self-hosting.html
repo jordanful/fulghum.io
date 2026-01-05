@@ -239,6 +239,13 @@
                 max-width: 100%;
                 display: block;
             }
+
+            .img-container-full img,
+            .img-container-inline img,
+            .img-container-full video,
+            .img-container-inline video {
+                cursor: default;
+            }
         }
 
         @media (max-width: 480px) {
@@ -551,6 +558,7 @@
 
         document.querySelectorAll('.img-container-full img, .img-container-inline img, .img-container-full video, .img-container-inline video').forEach(el => {
             el.addEventListener('click', () => {
+                if (window.innerWidth < 768) return;
                 const isVideo = el.tagName === 'VIDEO';
                 if (isVideo) {
                     const video = document.createElement('video');
