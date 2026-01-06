@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastery Fun vs Frontier Fun</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Mastery Fun vs Frontier Fun">
+    <meta name="description" content="Understanding the difference between two kinds of fun—and how generative AI changes the game for each.">
+    <meta name="author" content="Jordan Fulghum">
+    <meta name="keywords" content="mastery, learning, AI, generative tools, developer experience, frontier, growth">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fulghum.io/fun2">
+    <meta property="og:title" content="Mastery Fun vs Frontier Fun">
+    <meta property="og:description" content="Understanding the difference between two kinds of fun—and how generative AI changes the game for each.">
+    <meta property="og:image" content="https://fulghum.io/fun-dev.png">
+    <meta property="og:image:alt" content="Mastery Fun vs Frontier Fun">
+    <meta property="og:site_name" content="Jordan Fulghum">
+    <meta property="article:author" content="Jordan Fulghum">
+    <meta property="article:published_time" content="2025-01-06T00:00:00Z">
+    <meta property="article:section" content="Software Development">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Learning">
+    <meta property="article:tag" content="Mastery">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fulghum.io/fun2">
+    <meta property="twitter:title" content="Mastery Fun vs Frontier Fun">
+    <meta property="twitter:description" content="Understanding the difference between two kinds of fun—and how generative AI changes the game for each.">
+    <meta property="twitter:image" content="https://fulghum.io/fun-dev.png">
+    <meta property="twitter:creator" content="@jordanful">
+    <meta property="twitter:site" content="@jordanful">
+    
+    <!-- Additional Meta Tags for Rich Snippets -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://fulghum.io/fun2">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Mastery Fun vs Frontier Fun",
+      "description": "Understanding the difference between two kinds of fun—and how generative AI changes the game for each.",
+      "image": "https://fulghum.io/fun-dev.png",
+      "author": {
+        "@type": "Person",
+        "name": "Jordan Fulghum",
+        "url": "https://x.com/jordanful"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jordan Fulghum"
+      },
+      "datePublished": "2025-01-06",
+      "dateModified": "2025-01-06",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fulghum.io/fun2"
+      },
+      "keywords": ["mastery", "learning", "AI", "generative tools", "frontier"],
+      "articleSection": "Software Development"
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        em {
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
+        /* Image styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Image container for full-width images */
+        .img-container-full {
+            display: block;
+            margin: 2rem 0;
+            width: 100%;
+        }
+        
+        /* Image container for inline images */
+        .img-container-inline {
+            float: right;
+            margin: 0 0 1rem 1.5rem;
+            max-width: 300px;
+            clear: right;
+        }
+        
+        /* Caption styling */
+        .img-caption {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        
+        video {
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Clear floats after paragraphs with inline images */
+        .clear {
+            clear: both;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem 1rem;
+                font-size: 15px;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.35rem;
+            }
+            
+            h3 {
+                font-size: 1.15rem;
+            }
+            
+            .img-container-inline {
+                float: none;
+                margin: 1rem 0;
+                max-width: 100%;
+                display: block;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.25rem;
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mastery Fun vs Frontier Fun</h1>
+    <p>by <a href="https://fulghum.io">Jordan Fulghum</a>, January 2026</p>
+    
+    <h3>tl;dr</h3>
+    <p><em>Having "fun" while doing something is not binary. AI accelerates <strong>frontier fun</strong> but flattens <strong>mastery fun</strong>.</em></p>
+    
+    <p>Last year, I wrote <a href="fun.html">a post</a> about how vibecoding took away the fun of application development. Yesterday, I wrote <a href="self-hosting.html">a post</a> about how self-hosting is fun again.</p> How can the same tools create such different experiences?
+        <p>I've been trying to reconcile these two experiences and I think the answer is in the difference between two kinds of "fun".</p>
+
+    
+    
+    <p>Early in my career, application development was <strong>frontier</strong> fun. Everything was new, like:</p>
+    <ul>
+
+   
+        <li>How routing worked.</li>
+        <li>What REST is, and how it maps to HTTP.</li>
+        <li>How requests flowed through a framework.</li>
+        <li>Why databases existed at all.</li>
+    </ul>
+    <p>The fun came from learning big concepts and new mental models broadly. Every week was kinda like unlocking a new room.</p>
+    <p>Over time, that feeling has shifted. As I got deeper into whatever technology stack I was working in, the fun moved away from the broad strokes and into <strong>mastery</strong>. The minutiae. Beautiful syntax. Subtle language features. Weird edge cases. Patterns you only pick up from coworkers in code review. Taste. Judgment.</p>
+    
+    <p>That phase lasted a long time. It stayed fun because there was always another detail to learn, another sharp edge that got me, or another small insight that gave me that dopamine hit.</p>
+    
+    <p>Until recently.</p>
+    
+    <h2>What coding agents change</h2>
+    
+    <p>Coding agents like Claude Code compress learning curves - that's their superpower. But I don't think they compress all phases equally.</p>
+    
+    <p>When you're early in a domain or learning journey, LLMs accelerate you into the <strong>frontier</strong>. They very quickly help you orient, scaffold, and explore faster. The fun is in the broad strokes and discovery. You feel like you are learning just enough and quickly enough to be able to get to the next step.</p>
+    
+    <p>When you're deep or super experienced in a domain, though, LLMs smooth over the same texture that made mastery fun in the first place. The details evaporate and the serendipity drops. The work becomes about throughput, not so much discovery. Kinda more rote. Less... fun.</p>
+            
+    <h2>Two kinds of fun</h2>
+    
+    <p>This distinction helped things click for me.</p>
+    
+    <table>
+        <tr>
+            <th>kind of fun</th>
+            <th>what it 'feels' like</th>
+        </tr>
+        <tr>
+            <td>frontier fun</td>
+            <td>exploration, surprise, big learning jumps</td>
+        </tr>
+        <tr>
+            <td>mastery fun</td>
+            <td>depth, nuance, taste, accumulation of small insights</td>
+        </tr>
+    </table>
+    
+    <p>I'd bet that every field has both, perhaps we're just the first to really feel it because of these agentic systems. AI is super good at quietly destroying mastery fun without you even noticing.</p>
+    
+
+    
+    <h2>Fun isn't binary</h2>
+    
+    <p>Have coding agents made work more or less fun? I don't think there's a universal answer - it's very phase-dependent.</p>
+        
+    <p>If your joy comes from exploring new territory, AI is gasoline. If your joy comes from mastering details, agentic systems will probably drain you of oxygen.</p>
+        
+    <h2>Where I've landed</h2>
+        
+    <p>The kind of fun I'm wired for right now lives on the frontier, not deep in well-mapped territory. In places where there's still room to be surprised. Where learning is 'chunky'.</p>
+    <p>That said, I think I'll miss mastery. I'm not sure if there's ever going to be a time where it makes sense to reclaim it, which is disappointing even if the net result is more fun overall.</p>
+    
+    <p>The fun just moved. We gotta move with it.</p>
+    
+    
+    <hr>
+    
+    <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more.</p>
+    
+</body>
+</html>
+
