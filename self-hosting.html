@@ -341,10 +341,7 @@
         </tr>
     </table>
 
-    <p>The last one is the real unlock.</p>
-
-    <p>Instead of Googling "docker compose vaultwarden caddy reverse proxy" and stitching together five blog posts from 2021, I just let Claude figure out (up to you how much you care to really understand the technical details!).</p>
-
+<p>So instead of Googling things like “docker compose vaultwarden caddy reverse proxy” and piecing together a bunch of old blog posts, I just ran Claude Code directly on the machine and let it sort it out.</p>
     <h2>The hardware</h2>
 
     <div class="img-container-inline" style="max-width: 280px;">
@@ -474,36 +471,43 @@
 
     <p>Once that was running, I exported my passwords from iCloud/Keychain, imported them easily into Vaultwarden, and haven't looked back since.</p>
 
-    <p>That alone justified the box.</p>
 
     <h3>Immich is actually great</h3>
 
-    <p>Immich is a serious Google Photos replacement. I thought I'd have to compromise and flinched a bit when I installed it. But nope, it's good. Mobile apps. Face recognition via a local (but slow) machine learning thread. Timeline and map view. Automatic uploads from your photo roll.</p>
+    <p>Immich is a Google Photos replacement. I thought I'd have to compromise and flinched a bit when I installed it. But nope, it's good. Mobile apps. Face recognition via a local (but slow) machine learning thread. Timeline and map view. Automatic uploads from your photo roll.</p>
 
     <div class="img-container-full">
         <img src="immich.png" alt="Immich photo timeline interface"/>
-        <div class="img-caption">Immich. This is not a compromise. This is better.</div>
+        <div class="img-caption">Immich is a feature-rich replacement for Google Photos, complete with a mobile app.</div>
     </div>
 
     <p>This is the kind of thing that used to feel fragile and half-baked when self-hosted. It does not anymore.</p>
 
+    
+        <div class="img-container-inline" style="max-width: 280px;">
+            <img src="read-deck.png" alt="ReadDeck interface showing saved articles"/>
+            <div class="img-caption">ReadDeck. No lock-in nor surprise sunsetting.</div>
+        </div>
     <h3>ReadDeck fills the Pocket-shaped hole</h3>
 
     <p>Mozilla killed Pocket. I needed a replacement.</p>
 
     <p>I took a bet on ReadDeck. The UI is genuinely good. Clean typography, nice reading experience, good mobile support. It always remembers where I stopped reading and takes me right there. I even set up a shortcut that allows me to save an article for later right from mobile Firefox. Awesome.</p>
 
-    <div class="img-container-inline" style="max-width: 280px;">
-        <img src="read-deck.png" alt="ReadDeck interface showing saved articles"/>
-        <div class="img-caption">ReadDeck. No lock-in nor surprise sunsetting.</div>
-    </div>
-
     <p>This is exactly the kind of thing self-hosting is perfect for. A small, personal tool that you actually use every day.</p>
 
+    <h2>A custom dashboard</h2>
+    <p>I asked Claude to build a single-page dashboard to show the status of my services, system utilization, and such. It one-shotted it, building a local web app in Go and Svelte (what do I care?) that monitors the status and links out to each service. </p>
+    <p>I have always wanted a redundant local + remote backup system for my irreplaceable media - namely my photos going back about 25 years now. I plugged in an old USB drive to the Beelink, told Claude to backup daily, and it was done seconds later.</p>
+    <p>Then, I created a new IAM user in the AWS dashboard, installed the AWS CLI on the server, and asked Claude to backup to S3 weekly. On its own, it suggested Glacier Deep storage, which would run me about <em>twenty cents per month</em> for half a terabyte of photos. A minute or two later, I had remote backups, complete with monitoring + logs from the dashboard.</p>
+       <div class="img-container-full">
+        <img src="dashboard.png" alt="Claude Code one-shotted a custom dashboard for the entire server"/>
+        <div class="img-caption">Claude Code one-shotted this dashboard, which includes recurring backup jobs</div>
+    </div>
     <h2>Utilities for fun</h2>
     <h3>Lazydocker</h3>
 
-    <p><a href="https://github.com/jesseduffield/lazydocker" target="_blank" rel="noopener noreferrer">Lazydocker</a> is a terminal UI for Docker. It shows you all your containers, logs, stats, and lets you restart or shell into anything with a few keystrokes.</p>
+    <p>There are some great off-the-shelf utilities, too. <a href="https://github.com/jesseduffield/lazydocker" target="_blank" rel="noopener noreferrer">Lazydocker</a> is a terminal UI for Docker. It shows you all your containers, logs, stats, and lets you restart or shell into anything with a few keystrokes.</p>
 
     <p>I have been a huge fan of <a href="https://github.com/jesseduffield/lazygit" target="_blank">Lazygit</a> for some time. I think it's one of the best UIs I've ever used. So I was excited to learn that Lazydocker is basically that, but for monitoring Docker containers. No memorizing <code>docker ps</code> flags or grepping through logs. Just SSH in, type <code>lazydocker</code>, and everything is right there.</p>
 
@@ -521,6 +525,7 @@
     </div>
 
     <p>That is 13 services running on a $379 mini PC, using about 4 GB of RAM and almost no CPU. The N150 is not a powerhouse, but it does not need to be.</p>
+
 
     <h2>What it 'feels' like</h2>
 
