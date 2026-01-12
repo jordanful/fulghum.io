@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jordan Fulghum</title>
+    <link>https://fulghum.io</link>
+    <description>Product, design, and engineering.</description>
+    <language>en-us</language>
+    <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Mastery Fun vs Frontier Fun</title>
+      <link>https://fulghum.io/fun2</link>
+      <guid>https://fulghum.io/fun2</guid>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Understanding the difference between two kinds of fun, and how coding agents change the game for each.</description>
+    </item>
+
+    <item>
+      <title>2026 is the year of self-hosting</title>
+      <link>https://fulghum.io/self-hosting</link>
+      <guid>https://fulghum.io/self-hosting</guid>
+      <pubDate>Sun, 05 Jan 2026 00:00:00 GMT</pubDate>
+      <description>CLI agents like Claude Code make self-hosting dramatically easier and actually fun. This is the first time I would recommend it to normal software-literate people.</description>
+    </item>
+
+    <item>
+      <title>I built Cassette, an anti-serverless computer in the cloud</title>
+      <link>https://fulghum.io/cassette</link>
+      <guid>https://fulghum.io/cassette</guid>
+      <pubDate>Sat, 01 Nov 2025 00:00:00 GMT</pubDate>
+      <description>Bring back simple ops with a fast, predictable, always-on computer in the cloud—yours. Run apps, agents, CI, and databases without hyperscale complexity.</description>
+    </item>
+
+    <item>
+      <title>I created a free website that can screen for cognitive decline in under 60 seconds</title>
+      <link>https://fulghum.io/vocalmaze</link>
+      <guid>https://fulghum.io/vocalmaze</guid>
+      <pubDate>Thu, 16 Oct 2025 00:00:00 GMT</pubDate>
+      <description>A fast, private, and accessible tool for screening cognitive decline through language analysis. No recordings stored, no accounts required - just 60 seconds and text analysis.</description>
+    </item>
+
+    <item>
+      <title>I built physical album trading cards with NFC tags to teach my 10-year-old music discovery</title>
+      <link>https://fulghum.io/album-cards</link>
+      <guid>https://fulghum.io/album-cards</guid>
+      <pubDate>Wed, 15 Oct 2025 00:00:00 GMT</pubDate>
+      <description>What's the modern equivalent of flipping through CDs? Physical album cards with NFC tags that bring back the tactile joy of music discovery.</description>
+    </item>
+
+    <item>
+      <title>I prototyped an IDE for how we actually code now</title>
+      <link>https://fulghum.io/ide</link>
+      <guid>https://fulghum.io/ide</guid>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 GMT</pubDate>
+      <description>A native Mac IDE built around conversations with LLMs as the primary interface. Task-centric development with AI-driven planning, automated testing, and seamless production deployment.</description>
+    </item>
+
+    <item>
+      <title>Vibecoding took away the fun</title>
+      <link>https://fulghum.io/fun</link>
+      <guid>https://fulghum.io/fun</guid>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 GMT</pubDate>
+      <description>I feel like a wizard now. So where'd the magic go?</description>
+    </item>
+
+  </channel>
+</rss>
