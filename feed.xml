@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Remote Work, AI, and the Disappearing Engineer</title>
+      <link>https://fulghum.io/meaning</link>
+      <guid>https://fulghum.io/meaning</guid>
+      <pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate>
+      <description>What happens when you're shipping more than ever and feeling less than ever?</description>
+    </item>
+
+    <item>
       <title>Mastery Fun vs Frontier Fun</title>
       <link>https://fulghum.io/fun2</link>
       <guid>https://fulghum.io/fun2</guid>
