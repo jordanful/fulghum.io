@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Your Product Is No Longer the Center of Gravity</title>
+      <link>https://fulghum.io/gravity</link>
+      <guid>https://fulghum.io/gravity</guid>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
+      <description>AI is inverting the traditional product development cycle in B2B software.</description>
+    </item>
+
+    <item>
       <title>Remote Work, AI, and the Disappearing Engineer</title>
       <link>https://fulghum.io/meaning</link>
       <guid>https://fulghum.io/meaning</guid>
