@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown">
+    <meta name="description" content="From fewer than 10 names to 168 individuals, 19+ family lines, and 300+ years of sourced history.">
+    <meta name="author" content="Jordan Fulghum">
+    <meta name="keywords" content="genealogy, AI, Claude Code, autoresearch, family history, LLM">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fulghum.io/genealogy">
+    <meta property="og:title" content="I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown">
+    <meta property="og:description" content="From fewer than 10 names to 168 individuals, 19+ family lines, and 300+ years of sourced history.">
+    <meta property="og:site_name" content="Jordan Fulghum">
+    <meta property="article:author" content="Jordan Fulghum">
+    <meta property="article:published_time" content="2026-03-20T00:00:00Z">
+    <meta property="article:section" content="Software Development">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Genealogy">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://fulghum.io/genealogy">
+    <meta property="twitter:title" content="I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown">
+    <meta property="twitter:description" content="From fewer than 10 names to 168 individuals, 19+ family lines, and 300+ years of sourced history.">
+    <meta property="twitter:creator" content="@jordanful">
+    <meta property="twitter:site" content="@jordanful">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://fulghum.io/genealogy">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown",
+      "description": "From fewer than 10 names to 168 individuals, 19+ family lines, and 300+ years of sourced history.",
+      "author": {
+        "@type": "Person",
+        "name": "Jordan Fulghum",
+        "url": "https://x.com/jordanful"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jordan Fulghum"
+      },
+      "datePublished": "2026-03-20",
+      "dateModified": "2026-03-20",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fulghum.io/genealogy"
+      },
+      "keywords": ["genealogy", "AI", "Claude Code", "autoresearch", "family history", "LLM"],
+      "articleSection": "Software Development"
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        figure {
+            margin: 2rem 0;
+            padding: 0;
+        }
+
+        figure img {
+            display: block;
+            max-width: 100%;
+            border-radius: 4px;
+            cursor: zoom-in;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            cursor: zoom-out;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        figure figcaption {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #888;
+            line-height: 1.5;
+        }
+
+        figure.inline-right {
+            float: right;
+            margin: 0.25rem 0 1.5rem 2rem;
+            max-width: 220px;
+        }
+
+        figure.inline-right img {
+            width: 100%;
+        }
+
+        figure.inline-left {
+            float: left;
+            margin: 0.25rem 2rem 1.5rem 0;
+            max-width: 380px;
+        }
+
+        figure.inline-left img {
+            width: 100%;
+        }
+
+        .figure-row {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .figure-row figure {
+            flex: 1;
+            margin: 0;
+        }
+
+        .figure-row figure img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            figure.inline-right,
+            figure.inline-left {
+                float: none;
+                max-width: 100%;
+                margin: 2rem 0;
+            }
+
+            .figure-row {
+                flex-direction: column;
+            }
+
+            .figure-row figure img {
+                height: auto;
+            }
+
+            body {
+                padding: 1.5rem 1rem;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown</h1>
+    <p>by <a href="https://fulghum.io">Jordan Fulghum</a>, March 2026</p>
+
+    <p>My genealogy has always been spotty. Names passed down through word of mouth, half-remembered stories, a few dates. I've always wanted to fill in the blanks, but genealogy research is slow, manual detective work. You chase records, cross-check names, and hope you don't go down the wrong path.</p>
+
+    <p>A few days ago I came across <a href="https://github.com/mattprusak/autoresearch-genealogy" target="_blank" rel="noopener noreferrer">autoresearch-genealogy</a> by <a href="https://x.com/MattPrusak" target="_blank" rel="noopener noreferrer">Matt Prusak</a>. It's heavily inspired by Andrej Karpathy's <a href="https://github.com/karpathy/autoresearch" target="_blank" rel="noopener noreferrer">"autoresearch"</a> idea, which is simple: you give an agent a metric, you give it tools, and you let it run until it optimizes that metric. Autoresearch-genealogy is a lighter version of that pattern. It uses Claude Code and instructs it to hit a minimum number of iterations to optimize for a metric on a scoped basis. Same philosophy, just easier to get going.</p>
+
+    <p>The project itself is a set of prompts, guidelines, guardrails, and helpful resources that the agent can use, plus a templated Obsidian vault that gets filled in over time with everything from immigration records to DNA tests.</p>
+
+    <p>I wired it up and gave it a starting point: a family tree with fewer than 10 names.</p>
+
+    <h2>What came out</h2>
+
+    <figure class="inline-right">
+        <img src="/fulg_arms.webp" alt="Fulghum coat of arms">
+        <figcaption>The Fulghum coat of arms.</figcaption>
+    </figure>
+
+    <p>After a few sessions, the system expanded that into:</p>
+
+    <ul>
+        <li>168 individuals</li>
+        <li>19+ family lines</li>
+        <li>300+ years of history</li>
+        <li>A browsable, searchable dataset with sources attached to almost everything</li>
+    </ul>
+
+    <p>My oldest confirmed ancestor traces back to an early Jamestown settler, a man named Holt, mentioned in <a href="https://historicjamestowne.org/shop/books/all-books/adventurers-of-purse-and-person/" target="_blank" rel="noopener noreferrer"><em>Adventurers of Purse and Person</em></a>, the definitive record of Virginia's first colonists.</p>
+
+    <p>More interesting than the tree itself is what sits behind it: census records, death certificates, DAR applications, church records, newspaper clippings, conflicting accounts (kept, not hidden).</p>
+
+    <p>Each person is a file. Each claim is tied to something.</p>
+
+    <p>It's less like a tree and more like a graph of evidence.</p>
+
+    <div class="clearfix"></div>
+
+    <h2>A few things it found</h2>
+
+    <p>Most of this is only interesting to me, but a few stood out:</p>
+
+    <ul>
+        <li>My great-great-great-great grandfather rode with Quantrill (and likely alongside Jesse James). The system found an affidavit, matched timelines, and even surfaced his revolver for sale. My OpenClaw agent is negotiating the price with the seller.</li>
+    </ul>
+
+    <figure>
+        <img src="/revolver.png" alt="Quantrill raider Remington revolver auction listing">
+        <figcaption>An auction listing for a Remington revolver owned by my great-great-great-great grandfather, a Quantrill raider. Negotiations ongoing.</figcaption>
+    </figure>
+
+    <ul>
+        <li>One ancestor died by suicide in 1705. Under colonial Virginia law, that meant his estate was forfeited to the Crown. The governor petitioned Queen Anne (!) to return it to the children. She approved it.</li>
+        <li>My great-grandfather died in a Standard Oil refinery explosion when my grandfather was three. I had never heard this. The system found the newspaper clipping.</li>
+        <li>My grandmother filed for DAR membership. That line traces back to <a href="https://scholarworks.sfasu.edu/cgi/viewcontent.cgi?article=1344&context=ethj" target="_blank" rel="noopener noreferrer">Bailey Anderson</a>, who is documented well enough to have <a href="https://www.kltv.com/story/1497273/revolutionary-marker-dedicated-in-elysian-fields/" target="_blank" rel="noopener noreferrer">a plaque and published historical references</a>.</li>
+        <li>We never knew my paternal grandfather's original birth name. The system found it.</li>
+    </ul>
+
+    <div class="figure-row">
+        <figure>
+            <img src="/papa-alaska.jpg" alt="Walter Eggers in Alaska, 1949">
+            <figcaption>My late grandfather Walter Eggers (standing, center) in Alaska, 1949.</figcaption>
+        </figure>
+        <figure>
+            <img src="/anderson-plaque.jpg" alt="Bailey Anderson historical marker in Elysian Fields, Texas">
+            <figcaption>The Bailey Anderson historical marker in Elysian Fields, Texas.</figcaption>
+        </figure>
+    </div>
+
+    <p>None of these came from a single source. Each one required stitching together multiple records.</p>
+
+    <div class="clearfix"></div>
+
+    <h2>The output</h2>
+
+    <p>Everything lands in a markdown vault: one file per person, links between people, embedded sources, explicit unknowns.</p>
+
+    <p>Claude also built a small <a href="https://history.fulghum.io" target="_blank" rel="noopener noreferrer">Next.js app</a> on top of it so it's actually usable: browse by family line, search across people and places, click through relationships, basic tree visualization.</p>
+
+    <p>I deployed it on a tiny <a href="https://cassette.sh" target="_blank" rel="noopener noreferrer">Cassette</a> instance so I could share it with family.</p>
+
+    <p>I had Claude try a few different genealogy tree JavaScript libraries, and I didn't like any of them. So I just said "forget it, make your own." And it did. It wrote the SVG from scratch that visualizes my entire family tree from the 16th century to now.</p>
+
+    <h2>Where it breaks</h2>
+
+    <p>It's not perfect. Records get sparse fast the further back you go. Names shift, spelling changes, people disappear and reappear. Entire branches can look "correct" and still be wrong. The system helps by flagging single-source claims, preserving conflicts instead of flattening them, and logging failed searches, but you still need judgment.</p>
+
+    <h2>Next</h2>
+
+    <p>I want to push this further: add 23andMe data and see what aligns or breaks, pressure test weaker branches, and keep extending lines with stronger sourcing.</p>
+
+    <p>I found this genuinely addicting because there's always more. Every branch has a parent. Every dead end might just need a different search. You can always go higher up the tree. And you'll be surprised by what the agent finds. I keep being.</p>
+
+    <p>If you want to try it: <a href="https://github.com/mattprusak/autoresearch-genealogy" target="_blank" rel="noopener noreferrer">autoresearch-genealogy</a>, a markdown file, and some patience. That's enough to get started.</p>
+
+    <hr>
+
+    <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more.</p>
+
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('figure img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
