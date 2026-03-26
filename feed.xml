@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>On Mystery</title>
+      <link>https://fulghum.io/mystery</link>
+      <guid>https://fulghum.io/mystery</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+      <description>The difference between answers you receive and answers you have to build together.</description>
+    </item>
+
+    <item>
       <title>I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown</title>
       <link>https://fulghum.io/genealogy</link>
       <guid>https://fulghum.io/genealogy</guid>
