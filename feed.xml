@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>OpenAI has a branding problem</title>
+      <link>https://fulghum.io/openai</link>
+      <guid>https://fulghum.io/openai</guid>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <description>The company that led the consumer AI race might be losing the naming one.</description>
+    </item>
+
+    <item>
       <title>Post-primary-care</title>
       <link>https://fulghum.io/post-primary-care</link>
       <guid>https://fulghum.io/post-primary-care</guid>
