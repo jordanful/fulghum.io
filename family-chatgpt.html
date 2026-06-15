@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I built a private ChatGPT for my family</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="I built a private ChatGPT for my family">
+    <meta name="description" content="A local LLM, a family vault, and one tiny computer with a ridiculous GPU hanging off it.">
+    <meta name="author" content="Jordan Fulghum">
+    <meta name="keywords" content="local AI, self-hosting, LLM, Open WebUI, ZimaBoard, Tailscale, Kokoro, ComfyUI, family data, homelab">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://fulghum.io/family-chatgpt">
+    <meta property="og:title" content="I built a private ChatGPT for my family">
+    <meta property="og:description" content="A local LLM, a family vault, and one tiny computer with a ridiculous GPU hanging off it.">
+    <meta property="og:image" content="https://fulghum.io/zimaOS.jpg">
+    <meta property="og:image:alt" content="ZimaOS dashboard showing local apps, GPU usage, storage, and Open WebUI">
+    <meta property="og:site_name" content="Jordan Fulghum">
+    <meta property="article:author" content="Jordan Fulghum">
+    <meta property="article:published_time" content="2026-06-15T00:00:00Z">
+    <meta property="article:section" content="Artificial Intelligence">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Self-Hosting">
+    <meta property="article:tag" content="Family">
+    <meta property="article:tag" content="Homelab">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fulghum.io/family-chatgpt">
+    <meta property="twitter:title" content="I built a private ChatGPT for my family">
+    <meta property="twitter:description" content="A local LLM, a family vault, and one tiny computer with a ridiculous GPU hanging off it.">
+    <meta property="twitter:image" content="https://fulghum.io/zimaOS.jpg">
+    <meta property="twitter:image:alt" content="ZimaOS dashboard showing local apps, GPU usage, storage, and Open WebUI">
+    <meta property="twitter:creator" content="@jordanful">
+    <meta property="twitter:site" content="@jordanful">
+
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://fulghum.io/family-chatgpt">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "I built a private ChatGPT for my family",
+      "description": "A local LLM, a family vault, and one tiny computer with a ridiculous GPU hanging off it.",
+      "image": "https://fulghum.io/zimaOS.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Jordan Fulghum",
+        "url": "https://x.com/jordanful"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Jordan Fulghum"
+      },
+      "datePublished": "2026-06-15",
+      "dateModified": "2026-06-15",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fulghum.io/family-chatgpt"
+      },
+      "keywords": ["local AI", "self-hosting", "LLM", "Open WebUI", "ZimaBoard", "Tailscale", "Kokoro", "ComfyUI", "family data", "homelab"],
+      "articleSection": "Artificial Intelligence"
+    }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        em {
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+
+        th {
+            font-weight: 600;
+            color: #555;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-container-full {
+            display: block;
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .img-container-inline {
+            float: right;
+            margin: 0 0 1rem 1.5rem;
+            max-width: 300px;
+            clear: right;
+        }
+
+        .img-caption {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        video {
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem 1rem;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.5rem 0.75rem;
+            }
+
+            .img-container-inline {
+                float: none;
+                margin: 1rem 0;
+                max-width: 100%;
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.75rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I built a private ChatGPT for my family</h1>
+    <p>by <a href="https://fulghum.io">Jordan Fulghum</a>, June 2026</p>
+
+    <p><em>A local LLM, a family vault, and one tiny computer with a ridiculous GPU hanging off it.</em></p>
+
+    <div class="img-container-inline">
+        <img src="zimaboard.jpg" alt="ZimaBoard 2 connected to an external GPU dock"/>
+        <div class="img-caption">A very normal family computer.</div>
+    </div>
+
+    <p>ChatGPT has become the interface my family understands. Type a question, get an answer, keep going. My wife and kids do not want to SSH into anything, manage prompts, pick models, or learn the difference between a tool call and a RAG query. They want the box.</p>
+
+    <p>I wanted that same shape at home, but private, grounded in our actual family documents, and steerable toward our values instead of some global average.</p>
+
+    <p>So I built a private ChatGPT for our family.</p>
+
+    <h2>Definitively Not OpenClaw</h2>
+
+    <p>This is different from the OpenClaw-style path. I understand the appeal of stuffing an AI assistant into Telegram, WhatsApp, or iMessage, but that is the wrong abstraction for my family.</p>
+
+    <p>Those setups usually start by asking for integrations, permissions, authentication, passwords, and some pile of glue code before anyone has even asked a useful question. Then the payoff is a bot wedged into a chat app where people already talk to humans.</p>
+
+    <p>The ChatGPT interface won for a reason. My family already knows it. I wanted to keep that part.</p>
+
+    <h2>The hardware</h2>
+
+    <p>The machine is a <a href="https://www.zimaspace.com/products/zimaboard-2" target="_blank" rel="noopener noreferrer">ZimaBoard 2</a> with 16GB of RAM and a 1TB SSD. It runs <a href="https://www.zimaspace.com/pages/zimaos" target="_blank" rel="noopener noreferrer">ZimaOS</a>, a friendly home-server control surface with apps, file management, monitoring, and enough polish to make the whole thing feel coherent.</p>
+
+    <p>Then I did something silly and plugged it into an external GPU dock with an ASUS GeForce RTX 5060 Ti 16GB. The GPU is many times bigger than the computer it serves, which makes the whole rig look completely absurd in the best possible way.</p>
+
+    <div class="img-container-full">
+        <video data-autoplay-video autoplay loop muted preload="metadata" playsinline width="640" aria-label="GPU running in an external dock"><source src="gpu-brrrrr.mov"/></video>
+        <div class="img-caption">The tiny board asks the large GPU to please think about family paperwork.</div>
+    </div>
+
+    <p>I covered the broader self-hosting shift in <a href="/self-hosting">2026 is the year of self-hosting</a>, but this is the most emotionally obvious version of it so far. Cheap hardware, private networking, local inference, and coding agents have collapsed the distance between &ldquo;that would be cool&rdquo; and &ldquo;AGI is running on my desk right now, and I can watch it sweat.&rdquo;</p>
+
+    <h2>The software</h2>
+
+    <p>The stack is pretty simple:</p>
+
+    <table>
+        <tr>
+            <th>Part</th>
+            <th>Job</th>
+        </tr>
+        <tr>
+            <td>ZimaOS</td>
+            <td>Host, files, app management, monitoring</td>
+        </tr>
+        <tr>
+            <td><a href="https://github.com/ggml-org/llama.cpp" target="_blank" rel="noopener noreferrer">llama.cpp</a></td>
+            <td>Local inference layer</td>
+        </tr>
+        <tr>
+            <td><a href="https://ai.google.dev/gemma/docs/core" target="_blank" rel="noopener noreferrer">Gemma 4 12B</a></td>
+            <td>The local model I am running right now</td>
+        </tr>
+        <tr>
+            <td><a href="https://github.com/open-webui/open-webui" target="_blank" rel="noopener noreferrer">Open WebUI</a></td>
+            <td>The ChatGPT-shaped interface my family can actually use</td>
+        </tr>
+        <tr>
+            <td>Kokoro</td>
+            <td>Text-to-speech so my kids can listen to responses instead of reading everything</td>
+        </tr>
+        <tr>
+            <td>ComfyUI</td>
+            <td>Local diffusion and image generation</td>
+        </tr>
+        <tr>
+            <td><a href="https://tailscale.com" target="_blank" rel="noopener noreferrer">Tailscale</a></td>
+            <td>Private access from our devices without exposing the server to the internet</td>
+        </tr>
+    </table>
+
+    <p>Open WebUI is basically an unapologetic clone of ChatGPT's interface, plus the admin knobs you want for a home setup: model management, users, system prompts, knowledge bases, tools, and all the weird settings you can ignore until you need them.</p>
+
+    <div class="img-container-full">
+        <img src="open-web-ui.png" alt="Open WebUI answering a family-history question with retrieved sources from the Fulghum family collection"/>
+        <div class="img-caption">Open WebUI doing the important part: answering from our family documents, with sources attached.</div>
+    </div>
+
+    <div class="img-container-full">
+        <img src="zimaOS.jpg" alt="ZimaOS dashboard with Open WebUI, Tailscale, Ollama, GPU monitoring, and storage widgets"/>
+        <div class="img-caption">ZimaOS makes the whole thing feel like an appliance.</div>
+    </div>
+
+    <p>The app story is also a big part of why this feels approachable. ZimaOS has an app store with one-click installs for a bunch of off-the-shelf containerized services: Plex, Home Assistant, Tailscale, Postgres, Vaultwarden, Uptime Kuma, and plenty more. If the thing you want is not listed, you can still add a containerized app directly. That lowers the activation energy a lot.</p>
+
+    <div class="img-container-full">
+        <img src="zima-app-store.jpg" alt="ZimaOS app store showing one-click installs for containerized apps like Home Assistant, Plex, Tailscale, Postgres, and Uptime Kuma"/>
+        <div class="img-caption">The ZimaOS app store is basically a catalog of useful self-hosted building blocks.</div>
+    </div>
+
+    <p>The best part is that the hard problems are not that hard anymore. When the NVIDIA runtime gets weird, I can ask Claude to diagnose it. When a container does not see the GPU, I can paste logs and let the agent work through it. A few years ago this would have turned into a weekend of forum spelunking. Now it is mostly describing the desired end state and supervising.</p>
+
+    <h2>The family vault</h2>
+
+    <p>The model matters, but the documents are what make it useful for our house.</p>
+
+    <p>I have a family vault with our family history, financial documents, health records, kids' education data, mortgage documents, tax records, and the kind of boring PDFs that become very important at random times. All of that lives in a NAS directory that syncs from my MacBook to the ZimaBoard.</p>
+
+    <p>Open WebUI can embed those documents into a vector database. Models with tool use can then go retrieve the relevant chunks before answering. So instead of asking a generic chatbot a generic question, I can ask a private local model a question grounded in our actual source material.</p>
+
+    <p>This connects nicely to my <a href="/genealogy">Jamestown genealogy project</a>. That project produced a structured vault of people, sources, relationships, and claims. Now that vault can sit next to the rest of the family's documents and become queryable in the same interface.</p>
+
+    <p>That is a much more interesting family assistant than &ldquo;tell me a recipe for chicken.&rdquo; I want to ask what a document means, which claim is sourced, when something changed, what we paid last year, what a school note says, how a medical result compares to the prior one, or what a decision might imply for our actual household.</p>
+
+    <h2>Why this matters</h2>
+
+    <p>The privacy angle is obvious, but it is not the only reason I care.</p>
+
+    <p>The more important thing is steering. A family has values, goals, constraints, and weird little principles. We have ways we think about money, school, health, faith, responsibility, screens, sleep, food, and attention. I do not want to outsource all of that to Sam Altman or anyone else and hope the average-product default happens to fit us.</p>
+
+    <p>With a local family assistant, the system prompt can be ours. Be direct. Be calm. Respect our budget. Do not optimize for engagement. Help the kids reason instead of handing them answers. Prefer family context over internet averages. When tradeoffs exist, say so plainly.</p>
+
+    <p>Writing that prompt was also worth doing for its own sake. It forced us to say out loud what we actually want help to feel like in our house. What do we value? What tone do we want around our kids? When should the assistant push back? When should it stay out of the way? That exercise was challenging, fun, and weirdly introspective.</p>
+
+    <p>That sounds small, but it changes the product in a meaningful way. If intelligence is going to be ambient in the home, I want some say in its posture.</p>
+
+    <h2>Private by default</h2>
+
+    <p>Everything important is on our tailnet. My devices, my wife's devices, the kids' devices, and the ZimaBoard all run Tailscale. There is no public login page sitting on the open internet. From our perspective it feels like a normal website. From everyone else's perspective it does not exist.</p>
+
+    <p>This is the same reason the <a href="/album-cards">album cards</a> project worked so well. The best family technology does not feel like infrastructure. It feels like a thing in the house that does something useful. Pick up a card and music plays. Open a familiar chat box and the family vault answers.</p>
+
+    <h2>Who this is for</h2>
+
+    <p>This is not for everyone yet, but the circle is getting bigger fast.</p>
+
+    <p>If you are the technical dad in the house, or the technical mom, or the family member who already runs Plex and fixes the Wi-Fi, this is now within reach. You still need to be comfortable with hardware, local networking, containers, and the occasional GPU tantrum. But you do not need to be an infra wizard. The agents are good enough to help you through the boring parts.</p>
+
+    <p>The point is not to beat frontier models. I still use ChatGPT, Claude, and Gemini all day. The point is to have a private family intelligence layer that knows our context, keeps our documents close, and reflects the way we want help to sound inside our home.</p>
+
+    <hr>
+
+    <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more.</p>
+    <script>
+        const autoplayVideo = document.querySelector('[data-autoplay-video]');
+        if (autoplayVideo) {
+            const playVideo = () => autoplayVideo.play().catch(() => {});
+            if (autoplayVideo.readyState >= 2) {
+                playVideo();
+            } else {
+                autoplayVideo.addEventListener('canplay', playVideo, { once: true });
+            }
+        }
+    </script>
+</body>
+</html>

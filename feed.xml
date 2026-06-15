@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>I built a private ChatGPT for my family</title>
+      <link>https://fulghum.io/family-chatgpt</link>
+      <guid>https://fulghum.io/family-chatgpt</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A local LLM, a family vault, and one tiny computer with a ridiculous GPU hanging off it.</description>
+    </item>
+
+    <item>
       <title>OpenAI has a branding problem</title>
       <link>https://fulghum.io/openai</link>
       <guid>https://fulghum.io/openai</guid>
