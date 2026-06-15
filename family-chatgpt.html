@@ -201,14 +201,6 @@
             font-style: italic;
         }
 
-        video {
-            border-radius: 6px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            max-width: 100%;
-            height: auto;
-        }
-
         .clear {
             clear: both;
         }
@@ -291,7 +283,7 @@
     <p>Then I did something silly and plugged it into an external GPU dock with an ASUS GeForce RTX 5060 Ti 16GB (<a href="https://scanlin.io/" target="_blank" rel="noopener noreferrer">thanks Joe</a>). The GPU is many times bigger than the computer it serves, which makes the whole rig look completely absurd in the best possible way.</p>
 
     <div class="img-container-full">
-        <video data-autoplay-video autoplay loop muted preload="metadata" playsinline width="640" aria-label="GPU running in an external dock"><source src="gpu-brrrrr.mov"/></video>
+        <img src="gpu-brrrrr.webp" alt="External GPU fans spinning in an AOOSTAR dock"/>
         <div class="img-caption">The family paperwork engine, seen here making fan noise.</div>
     </div>
 
@@ -398,16 +390,5 @@
     <hr>
 
     <p>Follow me on <a href="https://x.com/jordanful" target="_blank" rel="noopener noreferrer">Twitter</a> for more.</p>
-    <script>
-        const autoplayVideo = document.querySelector('[data-autoplay-video]');
-        if (autoplayVideo) {
-            const playVideo = () => autoplayVideo.play().catch(() => {});
-            if (autoplayVideo.readyState >= 2) {
-                playVideo();
-            } else {
-                autoplayVideo.addEventListener('canplay', playVideo, { once: true });
-            }
-        }
-    </script>
 </body>
 </html>
