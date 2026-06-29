@@ -9,9 +9,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
         
         body {
-            max-width: 700px;
+            max-width: 1040px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
             color: #333;
@@ -31,6 +31,41 @@
             margin-bottom: 1rem;
             font-weight: 600;
             color: #222;
+        }
+
+        .intro {
+            max-width: 700px;
+        }
+
+        .home-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+            gap: 3.5rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .main-column h2:first-child,
+        .posts-column h2 {
+            margin-top: 0;
+        }
+
+        .posts-column {
+            border-left: 1px solid #e5e5e5;
+            padding-left: 2rem;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 1rem;
+        }
+
+        .section-heading a {
+            font-size: 0.875rem;
+            font-weight: 400;
+            white-space: nowrap;
         }
         
         p {
@@ -57,6 +92,27 @@
             color: #999;
             font-weight: bold;
         }
+
+        .posts-list {
+            margin-top: 1rem;
+        }
+
+        .posts-list li {
+            margin-bottom: 0.95rem;
+            padding-left: 0;
+        }
+
+        .posts-list li::before {
+            content: none;
+        }
+
+        .post-date {
+            display: block;
+            margin-top: 0.1rem;
+            color: #777;
+            font-size: 0.875rem;
+            line-height: 1.45;
+        }
         
         a {
             color: #007acc;
@@ -71,6 +127,17 @@
             body {
                 padding: 1.5rem 1rem;
                 font-size: 15px;
+            }
+
+            .home-layout {
+                display: block;
+                margin-top: 1.5rem;
+            }
+
+            .posts-column {
+                border-left: 0;
+                padding-left: 0;
+                margin-top: 2.5rem;
             }
             
             h1 {
@@ -95,78 +162,86 @@
     </style>
 </head>
 <body>
-    <h1>Jordan Fulghum</h1>
-    <p>Product, design, and engineering.</p>
-    
-    <h2 style="display: flex; justify-content: space-between; align-items: baseline;"><span>Posts</span><a href="/feed.xml" style="font-size: 0.875rem; font-weight: 400;">RSS</a></h2>
-    <ul>
-        <li><a href="/family-chatgpt">I built a private ChatGPT for my family</a> - June 2026</li>
-        <li><a href="/openai">OpenAI has a branding problem</a> — June 2026</li>
-        <li><a href="/post-primary-care">Post-primary-care</a> — May 2026</li>
-        <li><a href="/mystery">On Mystery</a> — March 2026</li>
-        <li><a href="/genealogy">I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown</a> — March 2026</li>
-        <li><a href="/POST-SOFTWARE">POST-SOFTWARE (March 2026)</a> — March 2026</li>
-        <li><a href="/gravity">Your Product Is No Longer the Center of Gravity</a> — February 2026</li>
-        <li><a href="/meaning">Remote Work, AI, and the Disappearing Engineer</a> — February 2026</li>
-        <li><a href="/fun2">Mastery Fun vs Frontier Fun</a> — January 2026</li>
-        <li><a href="/self-hosting">2026 is the year of self-hosting</a> — January 2026</li>
-        <li><a href="/cassette">I built Cassette, an anti-serverless computer in the cloud</a> — November 2025</li>
-        <li><a href="/vocalmaze">I created a free website that can screen for cognitive decline in under 60 seconds</a> — October 2025</li>
-        <li><a href="/album-cards">I built physical album trading cards with NFC tags to teach my 10-year-old music discovery</a> — October 2025</li>
-        <li><a href="/ide">I prototyped an IDE for how we actually code now</a> — June 2025</li>
-        <li><a href="/fun">Vibecoding took away the fun</a> — June 2025</li>
-    </ul>
-    
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <a href="https://tinychart.io">TinyChart</a> makes sharing data simple: paste CSV, auto-generate a chart, and share a link instantly with no account required.
-        </li>
-            <li>
-            <a href="https://jordanful.github.io/chapter">Chapter</a> is an open-source, self-hosted ebook reader with local AI voice narration. Seamlessly flip between reading and listening, with progress saved across modes and devices.
-        </li>
-        <li>
-            <a href="https://www.getbookend.com">Bookend</a> is the world's first AI assistant for the end of the world. An offline, local, one-click install chatbot that fits on a $10 thumb drive and is designed to help respawn civilization if SHTF.
-        </li>
-        <li>
-            <a href="https://vocalmaze.com">VocalMaze</a>, the first website that can give an accurate screening for cognitive decline to anyone in the world in under 60 seconds using a simple voice transcription and a transformer-based AI model that I fine-tuned.
-        </li>
-        <li>
-            I am always building other LLM/AI tools and toys, such as <a href="https://github.com/jordanful/Promptspot">Promptspot</a> (an open-source testing suite), <a href="https://promptprompt.io">Promptprompt</a> (lightning-fast CDN prompt hosting), <a href="https://github.com/jordanful/gait">Gait</a> (AI-powered Git CLI), and Echo (AI-generated podcasts before they were cool).
-        </li>
-       <li>
-         <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.apple.com/us/app/all-aboard-cta-bus-tracker/id627536216&ved=2ahUKEwiR0r7Ox6iMAxVRLtAFHaq8BbUQFnoECB0QAQ&usg=AOvVaw1DLeHCKDr9Q_CFAKp3MfD8">All Aboard</a>, the world's best Chicago bus tracking app</a>.
-       </li>
-    </ul>
+    <header class="intro">
+        <h1>Jordan Fulghum</h1>
+        <p>Product, design, and engineering.</p>
+    </header>
 
-    <h2>Work</h2>
-    <ul>
-        <li>
-            CEO @ <a href="https://kaizenlabs.dev">Kaizen Labs</a>, working on special projects for Ford Motors, Intercontinental Hotels, Groupon, and other friends.
-        </li>
-        <li>
-            Operating member of <a href="https://81collection.com">81 Collection</a>
-        </li>
-        <li>
-            Led product and design at <a href="https://rocketmiles.com">Rocketmiles</a>, acquired by Booking.com.
-        </li>
-        <li>Early design team at Groupon (0 to IPO) and Trunk Club (acquired by Nordstrom)</li>
-    </ul>
+    <div class="home-layout">
+        <main class="main-column">
+            <h2>Work</h2>
+            <ul>
 
-    
-    <h2>Not work</h2>
-    <ul>
-        <li>
-            <a href="https://twitter.com/jordanful" target="_blank">Follow me on Twitter</a>
-        </li>
-        <li>
-            <a href="https://letterboxd.com/jordanful" target="_blank">Check out what movies I'm watching</a>
-        </li>
-        <li>
-            <a href="https://photos.fulghum.io">Look at my pictures</a>. I currently shoot with a Ricoh GR III, a Voigtlander Bessa R3a + 40mm lens, and iPhone 16.
-        </li>
-    </ul>
-    <h2>Contact</h2>
-    <p>I can be reached via email at <a href="mailto:jordan@fulghum.io">jordan@fulghum.io</a></p>
+                <li>
+                    CTO @ <a href="https://81collection.com">The 81 Collection</a>, an investment fund focused on the 81% of the US economy underserved by VC and PE.
+                </li>
+                <li>
+                    Previously, led a small team at <a href="https://kaizenlabs.dev">Kaizen Labs</a>, a product studio that supported special projects at Ford Motors, Intercontinental Hotels, Groupon, and others.
+                </li>
+                <li>
+                    Led product, design, and growth at <a href="https://rocketmiles.com">Rocketmiles</a>, from founding through its acquisition by Booking.com and $900M in topline revenue.</li>
+                <li>Early design team at Groupon (0 to IPO) and Trunk Club (acquired by Nordstrom)</li>
+            </ul>
+
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <a href="https://tinychart.io">TinyChart</a> makes sharing data simple: paste CSV, auto-generate a chart, and share a link instantly with no account required.
+                </li>
+                <li>
+                    <a href="https://jordanful.github.io/chapter">Chapter</a> is an open-source, self-hosted ebook reader with local AI voice narration. Seamlessly flip between reading and listening, with progress saved across modes and devices.
+                </li>
+                <li>
+                    <a href="https://www.getbookend.com">Bookend</a> is the world's first AI assistant for the end of the world. An offline, local, one-click install chatbot that fits on a $10 thumb drive and is designed to help respawn civilization if SHTF.
+                </li>
+                <li>
+                    <a href="https://vocalmaze.com">VocalMaze</a>, the first website that can give an accurate screening for cognitive decline to anyone in the world in under 60 seconds using a simple voice transcription and a transformer-based AI model that I fine-tuned.
+                </li>
+                <li>
+                    I am always building other LLM/AI tools and toys, such as <a href="https://github.com/jordanful/Promptspot">Promptspot</a> (an open-source testing suite), <a href="https://promptprompt.io">Promptprompt</a> (lightning-fast CDN prompt hosting), <a href="https://github.com/jordanful/gait">Gait</a> (AI-powered Git CLI), and Echo (AI-generated podcasts before they were cool).
+                </li>
+                <li>
+                    <a href="https://apps.apple.com/us/app/all-aboard-cta-bus-tracker/id627536216">All Aboard</a>, the world's best Chicago bus tracking app.
+                </li>
+            </ul>
+
+            <h2>Elsewhere</h2>
+            <ul>
+                <li>
+                    Email me at <a href="mailto:jordan@fulghum.io">jordan@fulghum.io</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/jordanful" target="_blank">Follow me on Twitter</a>
+                </li>
+                <li>
+                    <a href="https://letterboxd.com/jordanful" target="_blank">Check out what movies I'm watching</a>
+                </li>
+                <li>
+                    <a href="https://photos.fulghum.io">Look at my pictures</a>. I currently shoot with a Ricoh GR III, a Voigtlander Bessa R3a + 40mm lens, and iPhone 16.
+                </li>
+            </ul>
+        </main>
+
+        <aside class="posts-column" aria-labelledby="posts-heading">
+            <h2 id="posts-heading" class="section-heading"><span>Posts</span><a href="/feed.xml">RSS</a></h2>
+            <ul class="posts-list">
+                <li><a href="/family-chatgpt">I built a private ChatGPT for my family</a><span class="post-date">June 2026</span></li>
+                <li><a href="/openai">OpenAI has a branding problem</a><span class="post-date">June 2026</span></li>
+                <li><a href="/post-primary-care">Post-primary-care</a><span class="post-date">May 2026</span></li>
+                <li><a href="/mystery">On Mystery</a><span class="post-date">March 2026</span></li>
+                <li><a href="/genealogy">I Used Claude Code + Autoresearch to Trace My Family History Back to Jamestown</a><span class="post-date">March 2026</span></li>
+                <li><a href="/POST-SOFTWARE">POST-SOFTWARE (March 2026)</a><span class="post-date">March 2026</span></li>
+                <li><a href="/gravity">Your Product Is No Longer the Center of Gravity</a><span class="post-date">February 2026</span></li>
+                <li><a href="/meaning">Remote Work, AI, and the Disappearing Engineer</a><span class="post-date">February 2026</span></li>
+                <li><a href="/fun2">Mastery Fun vs Frontier Fun</a><span class="post-date">January 2026</span></li>
+                <li><a href="/self-hosting">2026 is the year of self-hosting</a><span class="post-date">January 2026</span></li>
+                <li><a href="/cassette">I built Cassette, an anti-serverless computer in the cloud</a><span class="post-date">November 2025</span></li>
+                <li><a href="/vocalmaze">I created a free website that can screen for cognitive decline in under 60 seconds</a><span class="post-date">October 2025</span></li>
+                <li><a href="/album-cards">I built physical album trading cards with NFC tags to teach my 10-year-old music discovery</a><span class="post-date">October 2025</span></li>
+                <li><a href="/ide">I prototyped an IDE for how we actually code now</a><span class="post-date">June 2025</span></li>
+                <li><a href="/fun">Vibecoding took away the fun</a><span class="post-date">June 2025</span></li>
+            </ul>
+        </aside>
+    </div>
 </body>
 </html>
