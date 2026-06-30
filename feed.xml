@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>localhost is disappearing</title>
+      <link>https://fulghum.io/local.html</link>
+      <guid>https://fulghum.io/local.html</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Why localhost is becoming the wrong default for agentic software development.</description>
+    </item>
+
+    <item>
       <title>I built a private ChatGPT for my family</title>
       <link>https://fulghum.io/family-chatgpt</link>
       <guid>https://fulghum.io/family-chatgpt</guid>
