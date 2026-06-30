@@ -131,6 +131,21 @@
             margin: 3rem 0;
         }
 
+        .dialogue {
+            margin: 1.5rem 0 1.5rem 1rem;
+            padding: 0.25rem 0 0.25rem 1.25rem;
+            border-left: 3px solid #d8d8d8;
+            color: #555;
+        }
+
+        .dialogue p {
+            margin-bottom: 0.75rem;
+        }
+
+        .dialogue p:last-child {
+            margin-bottom: 0;
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -193,18 +208,17 @@
 
     <div class="img-container-full">
         <img src="local.png" alt="Email and browser screenshot showing localhost refused to connect"/>
-        <div class="img-caption">The app disappeared because the computer stopped serving it.</div>
+        <div class="img-caption">A production outage, if production is one open terminal window.</div>
     </div>
 
     <p>Explaining the concept of local vs. cloud to a non-technical person who has vibecoded something using coding agents is a surprisingly difficult task.</p>
 
-    <p>Me: &ldquo;You know how you have documents locally, but you can also share them with others for collaboration on Google Drive?&rdquo;</p>
-
-    <p>Non-technical vibecodey person: &ldquo;You mean, like Google Docs?&rdquo;</p>
-
-    <p>Me: &ldquo;Er, ok. You know how you have MP3 files locally but can also stream on Spotify?&rdquo;</p>
-
-    <p>Non-technical vibecodey person: &ldquo;MP3 what now?&rdquo;</p>
+    <blockquote class="dialogue">
+        <p><strong>Me:</strong> &ldquo;You know how you have documents locally, but you can also share them with others for collaboration on Google Drive?&rdquo;</p>
+        <p><strong>Non-technical vibecodey person:</strong> &ldquo;You mean, like Google Docs?&rdquo;</p>
+        <p><strong>Me:</strong> &ldquo;Er, ok. You know how you have MP3 files locally but can also stream on Spotify?&rdquo;</p>
+        <p><strong>Non-technical vibecodey person:</strong> &ldquo;MP3 what now?&rdquo;</p>
+    </blockquote>
 
     <p>I am getting emails like the above every day. Someone closes the terminal and &ldquo;the app disappears.&rdquo; Or they create a new record locally and are confused when they do not see the same updates to the production version.</p>
 
