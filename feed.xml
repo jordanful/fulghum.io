@@ -8,6 +8,14 @@
     <atom:link href="https://fulghum.io/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>I'm joining The 81 Collection</title>
+      <link>https://fulghum.io/81-collection</link>
+      <guid>https://fulghum.io/81-collection</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Why I'm joining The 81 Collection to bring software and AI leverage into durable, necessary businesses.</description>
+    </item>
+
+    <item>
       <title>localhost is disappearing</title>
       <link>https://fulghum.io/local.html</link>
       <guid>https://fulghum.io/local.html</guid>
